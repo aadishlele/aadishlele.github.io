@@ -10,10 +10,10 @@ tags:
 * List item 1
 * List item 2
 
-name | description
------|------------
-dan  | fun
-ben  | silly
+name    | description
+--------|------------
+aadish  | fun
+ben     | silly
 
 ### Hello This is a sub heading
 
