@@ -7,16 +7,4 @@ tags:
 
 # Hello My name is Aadish Lele
 
-* List item 1
-* List item 2
-
-name    | description
---------|------------
-aadish  | fun
-ben     | silly
-
-### Hello This is a sub heading
-
-1. step 1
-2. step 2
-3. step 3
+* EGR314_Indidivual_Block_Diagram
