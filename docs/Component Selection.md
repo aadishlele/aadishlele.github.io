@@ -448,6 +448,7 @@ PIC18F27Q10
 | Works with Microchip Code Configurator?       | Yes [image](#                |
 
 Pins Table
+
 | Module     | # Available | Needed | Associated Pins (or * for any) |
 | ---------- | ----------- | ------ | ------------------------------ |
 | GPIO       | 12          | 4      | Any GPIO Pin                   |
