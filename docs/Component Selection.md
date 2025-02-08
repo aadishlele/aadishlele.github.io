@@ -22,7 +22,8 @@ Subsystem: Motor Driver
 </tr>
 <tr class="odd">
 <th>1</th>
-<th><p><img src=![Motor_Driver_Option1](https://github.com/user-attachments/assets/cc242358-9642-4820-b8ae-3060a2081df9)
+<th><p><img src=![Motor_Driver_Option1](https://github.com/user-attachments/assets/55390559-ad65-4c9e-8718-5e2e57dd970f)
+
 style="width:1.81181in;height:1.82078in" /></p>
 <p>Option 1: <mark>IC MTR DRV BIPLR 2.75-6.8V 10 SOP</mark></p>
 <p><mark>Texas Instrument</mark></p>
@@ -41,7 +42,8 @@ package.</p></li>
 </ul></th>
 <th><ul>
 <li><p>The I²C interface may get slight control delays which is bad for
-our project.</p></li>
+our project.</p></li>![Uploading Motor_Driver_Option1.jpg…]()
+
 <li><p>Can only supply 1A peak, which is insufficient for motors with
 larger torque</p></li>
 </ul></th>
