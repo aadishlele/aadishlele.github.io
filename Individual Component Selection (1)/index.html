@@ -678,16 +678,135 @@
 </table>
 <p><strong>Final Choice</strong>: Option 1</p>
 <p><strong>Rationale</strong>: The 9V 13000 mAH battery is more functional and is portable. It can fit into the spinning top unlike other power supplies and also its pros are more inclined towards our project requirements.</p>
-<p>Microcontroller Selection:</p>
-<p>Requirements:
-I2C communication protocol for sending data from the motor driver to the ESP32 and multiple GPIO pins of the PIC DIP microcontroller.</p>
-<p>Microcontroller Considerations:
+<p>Microcontroller Considerations:<br />
 PIC18F27Q10</p>
-<p>*PIC TABLE</p>
-<p>*Pins Table</p>
+<table>
+<thead>
+<tr>
+<th>PIC Info</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>PIC18F27Q10</td>
+</tr>
+<tr>
+<td>Product Page URL</td>
+<td><a href="https://www.microchip.com/en-us/product/PIC18F27Q10">link</a></td>
+</tr>
+<tr>
+<td>Datasheet URL(s)</td>
+<td><a href="#https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F27-47Q10-Micorcontroller-Data-Sheet-DS40002043.pdf">link</a></td>
+</tr>
+<tr>
+<td>Vendor link</td>
+<td><a href="#https://www.microchip.com/">link</a></td>
+</tr>
+<tr>
+<td>Code Examples</td>
+<td><a href="#https://github.com/mojulian/BME280_Interface_for_PIC18F/blob/master/BME280.c">link</a></td>
+</tr>
+<tr>
+<td>External Resources URL(s)</td>
+<td><a href="#https://www.arrow.com/en/products/pic18f27q10-estx/microchip-technology">link</a></td>
+</tr>
+<tr>
+<td>Unit cost</td>
+<td>$1.05</td>
+</tr>
+<tr>
+<td>Absolute Maximum Current for entire IC</td>
+<td>10 A</td>
+</tr>
+<tr>
+<td>Supply Voltage Range</td>
+<td>1.8V - 5.5V</td>
+</tr>
+<tr>
+<td>Maximum GPIO current <br> (per pin)</td>
+<td>10 nA</td>
+</tr>
+<tr>
+<td>Supports External Interrupts?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Required Programming Hardware, Cost, URL</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Works with MPLabX?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Works with Microchip Code Configurator?</td>
+<td>Yes [image](#</td>
+</tr>
+</tbody>
+</table>
+<p>Pins Table</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th># Available</th>
+<th>Needed</th>
+<th>Associated Pins (or * for any)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO</td>
+<td>12</td>
+<td>4</td>
+<td>Any GPIO Pin</td>
+</tr>
+<tr>
+<td>ADC</td>
+<td>2</td>
+<td>2</td>
+<td>Any ADC Pin</td>
+</tr>
+<tr>
+<td>UART</td>
+<td>6</td>
+<td>1</td>
+<td>Any UART Pin</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>2</td>
+<td>1</td>
+<td>Any SPI Pin</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>2</td>
+<td>1</td>
+<td>Any I2C Pin</td>
+</tr>
+<tr>
+<td>PWM</td>
+<td>2</td>
+<td>1</td>
+<td>Any PWM Pin</td>
+</tr>
+<tr>
+<td>ICSP</td>
+<td>2</td>
+<td>0</td>
+<td>Any GPIO Pin</td>
+</tr>
+</tbody>
+</table>
 <p>Role Description:
 My role in the team is to program and design a motor driver and the motor which is the heart of our project. Our project is basically a spinning top with a HMI that will be able to control speed and direction of our spinning top. I will be using the PIC to ensure that when data and power are supplied, it runs and is able to balance itself on the ground. For this it is very essential for me to get the speed and direction of the motor right as that will smoothen the further process of sending that data to the ESP32 module. I am responsible for actuation using the motor and the motor driver.</p>
-<p>*Screenshots of MCC using the selected PIC</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/5c307e01-a002-461d-bce0-b09d79b1cb58" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="1001" alt="Ind_Component_Selection_MCC_PIC18F27Q10" src="https://github.com/user-attachments/assets/5c307e01-a002-461d-bce0-b09d79b1cb58" /></a></p>
+<p>Microcontroller Rationale:
+The PIC18F27Q10 is an excellent choice for our spinning top project because of its high-performance 8-bit architecture and varied peripherals. It uses
+efficient motor control With PWM modules and can use the Adafruit motor for its precise control.It also uses low power consumption and can help saving power for other subsytems. It also includes UART/SPi/I2C communication protocols and interfaces for interacting with the motor and motor driver. It supports ADC fro impementing Gyroscopes for motion control and balace which is another subsytem of our project. These features make the PIC18F27Q10 a power-efficient, and scalable microcontroller for ensuring smooth operation and precise control with PWMs.</p>
 
 
 
