@@ -447,6 +447,7 @@ PIC18F27Q10
 | Works with MPLabX?                            | Yes                          | 
 | Works with Microchip Code Configurator?       | Yes [image](#                |
 
+
 Pins Table
 
 | Module     | # Available | Needed | Associated Pins (or * for any) |
@@ -458,7 +459,6 @@ Pins Table
 | I2C        | 2           | 1      | Any I2C Pin                    |
 | PWM        | 2           | 1      | Any PWM Pin                    |
 | ICSP       | 2           | 0      | Any GPIO Pin                   |
-| ...        | ...         | ...    | ...                            |
 
 
 Role Description:
