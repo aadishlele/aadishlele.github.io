@@ -22,7 +22,8 @@ Subsystem: Motor Driver
 </tr>
 <tr class="odd">
 <th>1</th>
-<th><p><img src=[![Motor_Driver_Option1](https://github.com/user-attachments/assets/bd9a74ba-cc2c-4593-80a3-87e60c3e81da)]
+<th><p><img src=![Motor_Driver_Option1](https://github.com/user-attachments/assets/7b1a64d2-6662-4b77-8e82-fa583c50cf1a)
+
 style="width:1.81181in;height:1.82078in" /></p>
 <p>Option 1: <mark>IC MTR DRV BIPLR 2.75-6.8V 10 SOP</mark></p>
 <p><mark>Texas Instrument</mark></p>
