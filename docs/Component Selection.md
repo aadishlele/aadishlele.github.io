@@ -466,8 +466,8 @@ Pins Table
 Role Description:
 My role in the team is to program and design a motor driver and the motor which is the heart of our project. Our project is basically a spinning top with a HMI that will be able to control speed and direction of our spinning top. I will be using the PIC to ensure that when data and power are supplied, it runs and is able to balance itself on the ground. For this it is very essential for me to get the speed and direction of the motor right as that will smoothen the further process of sending that data to the ESP32 module. I am responsible for actuation using the motor and the motor driver.
 
+<img width="1001" alt="Ind_Component_Selection_MCC_PIC18F27Q10" src="https://github.com/user-attachments/assets/5c307e01-a002-461d-bce0-b09d79b1cb58" />
 
-*Screenshots of MCC using the selected PIC
 
 Microcontroller Rationale:
 The PIC18F27Q10 is an excellent choice for our spinning top project because of its high-performance 8-bit architecture and varied peripherals. It uses
