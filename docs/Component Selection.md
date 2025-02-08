@@ -445,12 +445,12 @@ PIC18F27Q10
 | Supports External Interrupts?                 | Yes                          | 
 | Required Programming Hardware, Cost, URL      | None                         | 
 | Works with MPLabX?                            | Yes                          | 
-| Works with Microchip Code Configurator?       | Yes [image](#             |
+| Works with Microchip Code Configurator?       | Yes [image](#                |
 
 Pins Table
 | Module     | # Available | Needed | Associated Pins (or * for any) |
 | ---------- | ----------- | ------ | ------------------------------ |
-| GPIO       | 12          | 4`     | Any GPIO Pin                   |
+| GPIO       | 12          | 4      | Any GPIO Pin                   |
 | ADC        | 2           | 2      | Any ADC Pin                    |
 | UART       | 6           | 1      | Any UART Pin                   |
 | SPI        | 2           | 1      | Any SPI Pin                    |
