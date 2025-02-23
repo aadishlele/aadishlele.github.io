@@ -5,4 +5,5 @@
 [EGR314_Schematic (21-02-2025 23-41-00).zip](https://github.com/user-attachments/files/18920717/EGR314_Schematic.21-02-2025.23-41-00.zip)
 
 
-[Schematic.pdf](https://github.com/user-attachments/files/18920718/Schematic.pdf)
+[EGR314_Schematic.pdf](https://github.com/user-attachments/files/18927721/EGR314_Schematic.pdf)
+
