@@ -1,4 +1,4 @@
-site_name: EGR314 Report Template
+site_name: EGR314 Aadish Lele
 site_url: https://embedded-systems-design.github.io/template_report
 repo_url: https://github.com/embedded-systems-design/template_report
 edit_uri: edit/main/docs/
@@ -9,7 +9,7 @@ theme:
     primary: blue
     accent: indigo
   font:
-    text: Roboto
+    text: Arial
   logo: static/logo.svg
   favicon: static/logo.png
 
@@ -59,7 +59,7 @@ extra_javascript:
 not_in_nav: |
   static
   
-copyright: "Copyright &copy; 2024 team-name-here"
+copyright: "Copyright &copy; 2024 Team 309"
 
 extra:
   generator: false
