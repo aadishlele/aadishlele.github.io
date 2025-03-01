@@ -1,5 +1,5 @@
-﻿|Description|Designator|Quantity|Manufacturer Part Number|
-| - | - | - | - |
+﻿|Description|Designator|Quantity|Manufacturer Part Number| |Footprint|Comment|
+| - | - | - | - | - | - |
 |Capacitors 0.10uF, X5R, 15%, 10%, 6.3V|C1|4||
 |CAP 0.1UF 16V X7R 0402|C2, C3, C?|12|GRM155R71C104KA88D|
 |CAP CER 100UF 6.3V X5R 1210|C\_in|4|GRM32ER60J107ME20L|
@@ -19,10 +19,6 @@
 |SWITCH TACTILE SPST-NO 0.05A 24V|SWitch|4|FSM2JSMAA|
 |IC REG BUCK 3.3V 1A 8SOIC|Switiching Voltage Regulator|3||
 |PIC18F27Q10T-I/ML 8-bit PIC MCU, 128 KB, 3615 Bytes, 64 MHz, 1.8 to 5.5V, QFN-28, RoHS|U?|2||
-
-
-|Footprint|Comment|
-| - | - |
 |FP-GRM033-0\_03-MFG|0\.1uF|
 |FP-GRM15-MFG|0\.1uF 16V|
 |FP-GRM32-0\_3-MFG|100uF|
