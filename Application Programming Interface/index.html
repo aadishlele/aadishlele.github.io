@@ -572,7 +572,99 @@
 
   <h1>Application Programming Interface</h1>
 
-
+<p>Each user has been assigned a user ID to make communication easier between users. Any messages sent will contain the sender and reciever ID to identify where its coming from and where its going to. Below is a list of IDs for each user in our project.  </p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>User</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xFF</td>
+<td>Bruce</td>
+</tr>
+<tr>
+<td>0xFE</td>
+<td>Baron</td>
+</tr>
+<tr>
+<td>0xFD</td>
+<td>Aadish</td>
+</tr>
+<tr>
+<td>0xFC</td>
+<td>Shaurya</td>
+</tr>
+</tbody>
+</table>
+<p>The following in a message structure for receiving date and sednign date for me sybsystem as seen in my Team website  </p>
+<table>
+<thead>
+<tr>
+<th>Message Type</th>
+<th>Byte 1-2 (Prefix)<br>(uint16_t)</th>
+<th>Byte 3 (Sender ID)<br>(uint8_t)</th>
+<th>Byte 4 (Reciever ID)<br>(uint8_t)</th>
+<th>Byte 5-6 (Data)<br>(uint16_t)</th>
+<th>Byte 7-8 (Suffix)<br>(uint16_t)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0x0001</td>
+<td>Bruce</td>
+<td>Aadish</td>
+<td>Motor Direction X</td>
+<td>0x0020</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0x0002</td>
+<td>Shaurya</td>
+<td>Aadish</td>
+<td>Motor Speed X</td>
+<td>0x0021</td>
+</tr>
+</tbody>
+</table>
+<p>The following are the message types I will be receiving for me to update the changes on the motor.<br />
+| Message Type | Description |
+|---|---|
+| 1 | Change Motor Direction |
+| 2 | Update Motor Speed |   </p>
+<table>
+<thead>
+<tr>
+<th>Message Type</th>
+<th>Byte 1-2 (Prefix)<br>(uint16_t)</th>
+<th>Byte 3 (Sender ID)<br>(uint8_t)</th>
+<th>Byte 4 (Reciever ID)<br>(uint8_t)</th>
+<th>Byte 5-6 (Data)<br>(uint16_t)</th>
+<th>Byte 7-8 (Suffix)<br>(uint16_t)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0x0001</td>
+<td>Bruce</td>
+<td>Aadish</td>
+<td>Motor Direction X</td>
+<td>0x0020</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0x0002</td>
+<td>Shaurya</td>
+<td>Aadish</td>
+<td>Motor Speed X</td>
+<td>0x0021</td>
+</tr>
+</tbody>
+</table>
 
 
 
