@@ -12,13 +12,13 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Bill%20Of%20Materials/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Application%20Programming%20Interface%20%28API%29/">
       
       
-        <link rel="prev" href="../Application%20Programming%20Interface/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../Individual%20Block%20Diagram/">
+        <link rel="next" href="../Application%20Programming%20Interface/">
       
       
       <link rel="icon" href="../static/logo.png">
@@ -29,7 +29,7 @@
 
     
       
-        <title>Bill Of Materials - EGR314 Aadish Lele</title>
+        <title>API - EGR314 Aadish Lele</title>
       
     
     
@@ -92,6 +92,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -123,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bill Of Materials
+              API
             
           </span>
         </div>
@@ -212,9 +217,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../Application%20Programming%20Interface%20%28API%29/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -246,11 +253,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../Bill%20Of%20Materials/" class="md-tabs__link">
         
   
     
@@ -406,9 +411,29 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Application%20Programming%20Interface%20%28API%29/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -417,6 +442,74 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user-id-assignments" class="md-nav__link">
+    User ID Assignments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-structure" class="md-nav__link">
+    Message Structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-my-subsystem-sends-receives" class="md-nav__link">
+    Messages My Subsystem Sends &amp; Receives
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages My Subsystem Sends & Receives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-1-change-motor-direction-received-from-bruce" class="md-nav__link">
+    Message Type 1 – Change Motor Direction (Received from Bruce)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-2-update-motor-speed-received-from-shaurya" class="md-nav__link">
+    Message Type 2 – Update Motor Speed (Received from Shaurya)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-handling-code" class="md-nav__link">
+    Message Handling Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -444,16 +537,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Bill%20Of%20Materials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +548,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -584,6 +669,64 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user-id-assignments" class="md-nav__link">
+    User ID Assignments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-structure" class="md-nav__link">
+    Message Structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-my-subsystem-sends-receives" class="md-nav__link">
+    Messages My Subsystem Sends &amp; Receives
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages My Subsystem Sends & Receives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-1-change-motor-direction-received-from-bruce" class="md-nav__link">
+    Message Type 1 – Change Motor Direction (Received from Bruce)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-2-update-motor-speed-received-from-shaurya" class="md-nav__link">
+    Message Type 2 – Update Motor Speed (Received from Shaurya)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-handling-code" class="md-nav__link">
+    Message Handling Code
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -598,7 +741,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Bill Of Materials.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Application Programming Interface (API).md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -606,13 +749,253 @@
   
 
 
-  <h1>Bill Of Materials</h1>
-
-<p>Aadish Lele
-Indidvidual Bill of Materials
-<a href="https://github.com/user-attachments/files/19037179/EGR314_Schematic_BOM.xlsx">EGR314_Schematic_BOM.xlsx</a></p>
-<p><a href="https://github.com/user-attachments/files/19037212/EGR314_Schematic_BOM.md">EGR314_Schematic_BOM.md</a>
-<a class="glightbox" href="https://github.com/user-attachments/assets/d91bd1b2-8469-4501-a861-6ce3f2a484b6" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="398" alt="Image" src="https://github.com/user-attachments/assets/d91bd1b2-8469-4501-a861-6ce3f2a484b6" /></a></p>
+<h1 id="api"><strong>API</strong></h1>
+<h2 id="user-id-assignments"><strong>User ID Assignments</strong></h2>
+<table>
+<thead>
+<tr>
+<th>User</th>
+<th>User ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bruce</td>
+<td>0xFF</td>
+</tr>
+<tr>
+<td>Baron</td>
+<td>0xFE</td>
+</tr>
+<tr>
+<td><strong>Aadish</strong></td>
+<td><strong>0xFD</strong></td>
+</tr>
+<tr>
+<td>Shaurya</td>
+<td>0xFC</td>
+</tr>
+</tbody>
+</table>
+<h2 id="message-structure"><strong>Message Structure</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Byte #</th>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td><strong>Prefix</strong></td>
+<td><code>uint16_t</code></td>
+<td>Message start identifier</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Sender ID</strong></td>
+<td><code>uint8_t</code></td>
+<td>Identifies who sent the message</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Receiver ID</strong></td>
+<td><code>uint8_t</code></td>
+<td>Identifies who should receive the message</td>
+</tr>
+<tr>
+<td>5-6</td>
+<td><strong>Data</strong></td>
+<td><code>uint16_t</code></td>
+<td>Message-specific data</td>
+</tr>
+<tr>
+<td>7-8</td>
+<td><strong>Suffix</strong></td>
+<td><code>uint16_t</code></td>
+<td>Message end identifier</td>
+</tr>
+</tbody>
+</table>
+<h2 id="messages-my-subsystem-sends-receives"><strong>Messages My Subsystem Sends &amp; Receives</strong></h2>
+<h3 id="message-type-1-change-motor-direction-received-from-bruce"><strong>Message Type 1 – Change Motor Direction (Received from Bruce)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Data Type</th>
+<th>Min Value</th>
+<th>Max Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td><code>prefix</code></td>
+<td><code>uint16_t</code></td>
+<td>0x0001</td>
+<td>0x0001</td>
+<td>0x0001</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>sender_id</code></td>
+<td><code>uint8_t</code></td>
+<td>0xFF</td>
+<td>0xFF</td>
+<td>0xFF</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>receiver_id</code></td>
+<td><code>uint8_t</code></td>
+<td>0xFD</td>
+<td>0xFD</td>
+<td>0xFD</td>
+</tr>
+<tr>
+<td>5-6</td>
+<td><code>motor_direction</code></td>
+<td><code>uint16_t</code></td>
+<td>0x40 (Forward)</td>
+<td>0x41 (Reverse)</td>
+<td>0x40</td>
+</tr>
+<tr>
+<td>7-8</td>
+<td><code>suffix</code></td>
+<td><code>uint16_t</code></td>
+<td>0x0020</td>
+<td>0x0020</td>
+<td>0x0020</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Function:</strong> Commands Aadish to change motor direction.</p>
+<h3 id="message-type-2-update-motor-speed-received-from-shaurya"><strong>Message Type 2 – Update Motor Speed (Received from Shaurya)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Data Type</th>
+<th>Min Value</th>
+<th>Max Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td><code>prefix</code></td>
+<td><code>uint16_t</code></td>
+<td>0x0002</td>
+<td>0x0002</td>
+<td>0x0002</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>sender_id</code></td>
+<td><code>uint8_t</code></td>
+<td>0xFC</td>
+<td>0xFC</td>
+<td>0xFC</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>receiver_id</code></td>
+<td><code>uint8_t</code></td>
+<td>0xFD</td>
+<td>0xFD</td>
+<td>0xFD</td>
+</tr>
+<tr>
+<td>5-6</td>
+<td><code>motor_speed</code></td>
+<td><code>uint16_t</code></td>
+<td>0x42 (Increase)</td>
+<td>0x43 (Decrease)</td>
+<td>0x42</td>
+</tr>
+<tr>
+<td>7-8</td>
+<td><code>suffix</code></td>
+<td><code>uint16_t</code></td>
+<td>0x0021</td>
+<td>0x0021</td>
+<td>0x0021</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Function:</strong> Updates the motor speed in Aadish’s motor driver system.</p>
+<h2 id="message-handling-code"><strong>Message Handling Code</strong></h2>
+<p>#include \&lt;xc.h&gt;<br />
+#include \&lt;stdint.h&gt;<br />
+#include \&lt;stdbool.h&gt;<br />
+#define UART_BUFFER_SIZE 10<br />
+#define MSG_PREFIX_1 0x0001  // Change Motor Direction<br />
+#define MSG_PREFIX_2 0x0002  // Update Motor Speed<br />
+#define MSG_SUFFIX_1 0x0020<br />
+#define MSG_SUFFIX_2 0x0021<br />
+// UART Receive Buffer<br />
+volatile uint8_t uartBuffer[UART_BUFFER_SIZE];<br />
+volatile uint8_t bufferIndex \= 0;<br />
+// Function Prototypes<br />
+void UART_Init(void);<br />
+void UART_Send(uint8_t *message, uint8_t length);<br />
+void Process_Message(uint8_t *message, uint8_t length);<br />
+void UART_Receive_Handler(void);<br />
+void UART_Init(void) {<br />
+    // Configure UART for 9600 baud, 8-N-1<br />
+    SPBRG \= 25; // Adjust for different baud rates<br />
+    TXSTAbits.BRGH \= 1;<br />
+    RCSTAbits.SPEN \= 1; // Enable UART<br />
+    RCSTAbits.CREN \= 1; // Enable Reception<br />
+    TXSTAbits.TXEN \= 1; // Enable Transmission<br />
+    // Enable Interrupts<br />
+    PIE1bits.RCIE \= 1;<br />
+    INTCONbits.PEIE \= 1;<br />
+    INTCONbits.GIE \= 1;<br />
+}<br />
+void UART_Send(uint8_t *message, uint8_t length) {<br />
+    for (uint8_t i \= 0; i \&lt; length; i++) {<br />
+        TXREG \= message[i];<br />
+        while (!TXSTAbits.TRMT);<br />
+    }<br />
+}<br />
+void Process_Message(uint8_t *message, uint8_t length) {<br />
+    uint16_t prefix \= (message[0] \&lt;\&lt; 8) | message[1];<br />
+    uint16_t suffix \= (message[6] \&lt;\&lt; 8) | message[7];<br />
+    if (prefix \== MSG_PREFIX_1 &amp;&amp; suffix \== MSG_SUFFIX_1) {<br />
+        uint8_t motor_direction \= message[4];<br />
+        // Apply motor direction change here<br />
+    }<br />
+    else if (prefix \== MSG_PREFIX_2 &amp;&amp; suffix \== MSG_SUFFIX_2) {<br />
+        uint16_t motor_speed \= message[4];<br />
+        // Apply motor speed update here<br />
+    }<br />
+    uint8_t ack_msg[] \= {message[0], message[1], 0x01};<br />
+    UART_Send(ack_msg, 3);<br />
+}<br />
+void UART_Receive_Handler(void) {<br />
+    if (PIR1bits.RCIF) {<br />
+        uint8_t receivedByte \= RCREG;<br />
+        if (bufferIndex \== 0 &amp;&amp; receivedByte != 0x00) {<br />
+            uartBuffer[bufferIndex++] \= receivedByte;<br />
+        } else if (bufferIndex &gt; 0) {<br />
+            uartBuffer[bufferIndex++] \= receivedByte;<br />
+            if (bufferIndex &gt;= UART_BUFFER_SIZE) {<br />
+                Process_Message(uartBuffer, bufferIndex);<br />
+                bufferIndex \= 0;<br />
+            }<br />
+        }<br />
+    }<br />
+}  </p>
 
 
 
@@ -640,7 +1023,7 @@ Indidvidual Bill of Materials
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Application%20Programming%20Interface/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Application Programming Interface" rel="prev">
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome to my website" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -650,20 +1033,20 @@ Indidvidual Bill of Materials
                 Previous
               </span>
               <div class="md-ellipsis">
-                Application Programming Interface
+                Welcome to my website
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Individual%20Block%20Diagram/" class="md-footer__link md-footer__link--next" aria-label="Next: Individual Block Diagram" rel="next">
+          <a href="../Application%20Programming%20Interface/" class="md-footer__link md-footer__link--next" aria-label="Next: Application Programming Interface" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Individual Block Diagram
+                Application Programming Interface
               </div>
             </div>
             <div class="md-footer__button md-icon">
