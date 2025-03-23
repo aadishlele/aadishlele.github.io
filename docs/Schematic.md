@@ -1,4 +1,5 @@
 
+## Schemaic design of Motor driver Subsystem
 
 EGR314 Aadish Lele Schematic[EGR314_Schematic.pdf](https://github.com/user-attachments/files/19037171/EGR314_Schematic.pdf)
 
