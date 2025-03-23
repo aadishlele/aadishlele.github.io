@@ -1,7 +1,4 @@
-﻿EGR314: Aadish Lele Team 309
-
-Professor Nichols
-
+﻿## Individual Component Selection
 Subsystem: Motor Driver
 
 1. Motor Driver
