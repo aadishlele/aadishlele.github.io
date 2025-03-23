@@ -3,7 +3,7 @@ title: Welcome to my website
 
 ---
 
-# Hello, I am Aadish Lele  
+## Hello, I am Aadish Lele  
 
 I am part of Team 309 in EGR 314. Our main porject is making a user controlled spinning top where the user shall be able to 
 control the speed and direction of the spinning top. The userwill be able to see the speed of he motor on a HMI. My design
@@ -18,7 +18,16 @@ Team Members and their webites:
 - [Baron Website - MQTT](https://scoon04.github.io/)   
 - [Bruce Website - HMI](https://ibmyers2.github.io/EGR314_Team309_IBM/)   
 - [Aadish Website - Actuator](https://aadishlele.github.io/)   
-- [Shaurya Website - Sensor](https://shauryamanglik.github.io/shauryamanglik/)   
+- [Shaurya Website - Sensor](https://shauryamanglik.github.io/shauryamanglik/)
+
+
+Preperation Date: January 16  
+
+Spring 2025  
+
+Arizona State University   
+EGR 314, Prof. Nichols
+
 
 
 
