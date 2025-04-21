@@ -1,9 +1,9 @@
 
 ## Schematic design of Motor driver Subsystem
 
-EGR314 Aadish Lele Schematic[EGR314_Schematic.pdf](https://github.com/user-attachments/files/19037171/EGR314_Schematic.pdf)
+EGR314 Aadish Lele Schematic
+![Image](https://github.com/user-attachments/assets/c7163d30-6a1a-4427-86f4-89c7ff576e49)
 
-EGR314 Aadish lele Schematic zip
-[EGR314_Schematic (28-02-2025 22-20-39).zip](https://github.com/user-attachments/files/19037172/EGR314_Schematic.28-02-2025.22-20-39.zip)
 
-<img width="841" alt="Screenshot 2025-03-17 122724" src="https://github.com/user-attachments/assets/d2682497-803c-4f92-b5fe-81dcdcd26814" />
+EGR314 Motor SubSystem Schematic
+<img width="841" alt="Screenshot 2025-03-17 122724" src="[https://github.com/user-attachments/assets/c7163d30-6a1a-4427-86f4-89c7ff576e49]" />
