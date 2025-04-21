@@ -69,7 +69,7 @@ PIC18F27Q10
 
 | PIC Info                                      | Answer                                    |       
 | --------------------------------------------- | ------------------------------------------| 
-| Model                                         | PIC18F27Q10                                                  |   
+| Model                                         | PIC18F47Q10                                                  |   
 | Product Page URL                              | [link](https://www.microchip.com/en-us/product/PIC18F27Q10)  |                                       
 | Datasheet URL(s)                              | [link](#https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F27-47Q10-Micorcontroller-Data-Sheet-DS40002043.pdf)       | Application Notes URL(s)                      | [link](#https://www.microchip.com/en-us/application-notes/tb3237)|                                        
 | Vendor link                                   | [link](#https://www.microchip.com/)                              | 
@@ -105,7 +105,7 @@ My role in the team is to program and design a motor driver and the motor which 
 
 
 Microcontroller Rationale:
-The PIC18F27Q10 is an excellent choice for our spinning top project because of its high-performance 8-bit architecture and varied peripherals. It uses
+The PIC18F47Q10 is an excellent choice for our spinning top project because of its high-performance 8-bit architecture and varied peripherals. It uses
 efficient motor control With PWM modules and can use the Adafruit motor for its precise control.It also uses low power consumption and can help saving power for other subsytems. It also includes UART/SPi/I2C communication protocols and interfaces for interacting with the motor and motor driver. It supports ADC fro impementing Gyroscopes for motion control and balace which is another subsytem of our project. These features make the PIC18F27Q10 a power-efficient, and scalable microcontroller for ensuring smooth operation and precise control with PWMs.
 
 
