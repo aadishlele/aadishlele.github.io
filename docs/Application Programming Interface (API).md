@@ -4,10 +4,8 @@
 
 | User | User ID |
 | ----- | ----- |
-| Bruce | 0xFF |
-| Baron | 0xFE |
-| **Aadish** | **0xFD** |
-| Shaurya | 0xFC |
+| **Aadish** | **A** |
+| Shaurya | S |
 
 ## **Message Structure**
 
@@ -21,7 +19,7 @@
 
 ## **Messages My Subsystem Sends & Receives**
 
-### **Message Type 1 – Change Motor Direction (Received from Bruce)**
+### **Message Type 1 – Motor Direection Command**
 
 | Byte | Variable Name | Data Type | Min Value | Max Value | Example |
 | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -33,7 +31,7 @@
 
 **Function:** Commands Aadish to change motor direction.
 
-### **Message Type 2 – Update Motor Speed (Received from Shaurya)**
+### **Message Type 2 – Acknowledgement**
 
 | Byte | Variable Name | Data Type | Min Value | Max Value | Example |
 | ----- | ----- | ----- | ----- | ----- | ----- |
