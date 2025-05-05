@@ -24,7 +24,7 @@ EGR314 PCB Gerber file zip:
 # Functional Analysis of the Schematic: Meeting User Needs and Product Specs
 The schematic is a clear-cut hardware design created in Altium Designer, consisting of several neatly labeled sections. It integrates power regulation, SPI motor control, UART comms, and programming/debugging functionality to achieve the main goal: demonstrating how temperature change can dynamically control motor rotation within a modular, STEM-themed display.  
 
-1. Neatly Sectionalized Structure for Modularity and Debugging  
+**Neatly Sectionalized Structure for Modularity and Debugging**    
 The schematic is divided into headed blocks capturing functional areas:  
 - Switching Voltage Regulator  
 - Motor Driver  
@@ -36,13 +36,14 @@ The schematic is divided into headed blocks capturing functional areas:
   
 The compartmentalization of the schematic makes it easy to understand, modify, and debug—key product specifications in tutorial and interactive systems. Net labels like CSN, SCK, SI, and SO also make tracing communication lines from section to section easy.  
 
-Motor Driver Control via SPI – Real-Time Actuation  
+**Motor Driver Control via SPI – Real-Time Actuation**    
 The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:
 - CSN (Chip Select)  
 - SCK (Clock)  
 - SI (Serial Input)  
-- SO (Serial Output)  
-OUT1 and OUT2 motor outputs are connected to test points for easy probing or direct connection to motors. The outputs are driven from temperature inputs, addressing the requirement of actuating from sensor-driven information—a critical user need in control systems and embedded engineering.  
+- SO (Serial Output)   
+- OUT1 and OUT2 motor outputs are connected to test points for easy probing or direct connection to motors.  
+The outputs are driven from temperature inputs, addressing the requirement of actuating from sensor-driven information—a critical user need in control systems and embedded engineering.  
 
 UART Data Reception – Sensor PCB Integration  
 There are two ribbon connectors (CONN_IN and CONN_OUT) for UART data on the schematic:  
@@ -51,14 +52,14 @@ There are two ribbon connectors (CONN_IN and CONN_OUT) for UART data on the sche
 
 The UART interface addresses the requirement for inter-device communication and sensor integration modularity, which is crucial for scalable and pedagogically significant hardware demonstrations.  
 
-Switching Regulator-Based Power Management:    
+**Switching Regulator-Based Power Management**:      
 A specialized AP62300WU-7 switching voltage regulator controls input voltage to a reliable 5V supply used throughout the circuit. This delivers:
 - Power efficiency
 - Smooth operation of the PIC and motor driver
 - Protection from undervoltage conditions
 - Smooth power delivery allows for extended use in display applications without overheating or noise interference.
 
-Onboard Programming and Debugging:  
+**Onboard Programming and Debugging:**    
 The schematic includes:  
 - An 8-pin Snap Programmer header for programming code into the PIC18F47Q10.  
 - A pull-up resistor and decoupling cap MCLR circuit for proper reset operation.  
@@ -67,14 +68,14 @@ The schematic includes:
 
 All the above cater to the user's need for ease of development, testability, and debuggability, which are critical in academic and prototyping environments.
 
-Educational Demonstrability and Interactivity  
+**Educational Demonstrability and Interactivity**    
 By allowing users to:
 - Watch LED indicators,
 - Connect motors directly via test points, debugging is simplified, and activities can be directly understood.
 - Send and receive UART messages,
 - And display behavior as a reaction to temperature, the schematic satisfies product requirements for a STEM-themed, interactive physical system that clearly and effectively demonstrates embedded concepts.  
 
-Conclusion  
+**Conclusion**    
 The functionality of this schematic is carefully crafted to meet technical as well as educational purposes. It demonstrates good system modularity, effective real-time control, standard communication protocols and clear visual feedback mechanisms. All of which are directly in accordance with the needs of students, teachers, and users viewing the project as part of an internet-enabled, interactive STEM exhibition. The design is sound and pedagogically effective, evidencing good engineering practice and thoughtful system integration.  
 
 # Team Design and Decision making process  
@@ -119,7 +120,7 @@ To future-proof the design, I may include additional headers or expansion points
   - Future sensor inputs.  
   - Power monitoring or wireless modules.  
 
-Summary
+**Summary**  
 In summary, Version 2 of the schematic and PCB would emphasize:  
 - Better organization through full netlabel use.  
 - Cleaner schematic layout with simplified wiring.  
