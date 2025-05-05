@@ -645,21 +645,21 @@
 <p>EGR314 Individual Block Diagram PDF:
 <a href="https://github.com/user-attachments/files/19830142/BLOCKDIAGRAM.pdf">BLOCKDIAGRAM.pdf</a></p>
 <h1 id="selection-process-and-explaination">Selection process and explaination</h1>
-<p>The Motor Driver PCB block diagram is organized into three primary sections: Connections, Motor Driver, and the PIC18F47Q10 Microcontroller.</p>
-<p>Motor Driver Section:
-This component features two output pins that connect directly to the motor, enabling directional control. It also includes two SPI communication pins that interface with the PIC microcontroller for receiving control commands.</p>
+<p>The Motor Driver PCB block diagram is organized into three primary sections: Connections, Motor Driver, and the PIC18F47Q10 Microcontroller.  </p>
+<p>Motor Driver Section:<br />
+This component features two output pins that connect directly to the motor, enabling directional control. It also includes two SPI communication pins that  interface with the PIC microcontroller for receiving control commands.  </p>
 <p>PIC18F47Q10 Microcontroller Section:
-The PIC18F47Q10 is responsible for controlling the motor via SPI communication. It connects to the motor driver through four SPI pins:
-- CSN (Chip Select)
-- SCK (Serial Clock)
-- SI (Serial Input)
-- SO (Serial Output)</p>
-<p>Additionally, the PIC has two UART pins:
-- RX (Receiver) connected to the Connector IN via ribbon cable
-- TX (Transmitter) connected to the Connector OUT via ribbon cable</p>
+The PIC18F47Q10 is responsible for controlling the motor via SPI communication. It connects to the motor driver through four SPI pins:<br />
+- CSN (Chip Select)<br />
+- SCK (Serial Clock)<br />
+- SI (Serial Input)<br />
+- SO (Serial Output)  </p>
+<p>Additionally, the PIC has two UART pins:<br />
+-  RX (Receiver) connected to the Connector IN via ribbon cable<br />
+-  TX (Transmitter) connected to the Connector OUT via ribbon cable  </p>
 <p>Connections Section:
-This section contains the ribbon cable interfaces for UART communication. The RX pin receives incoming data via the Connector IN, and the TX pin sends outgoing data via the Connector OUT.</p>
-<p>The block diagram was designed by first identifying and separating the core components, then listing all relevant pins for each. Once the interconnections between components were finalized, the diagram was completed to reflect the full communication and control pathways.</p>
+This section contains the ribbon cable interfaces for UART communication. The RX pin receives incoming data via the Connector IN, and the TX pin sends outgoing data via the Connector OUT.  </p>
+<p>The block diagram was designed by first identifying and separating the core components, then listing all relevant pins for each. Once the interconnections between components were finalized, the diagram was completed to reflect the full communication and control pathways.  </p>
 
 
 
