@@ -19,6 +19,7 @@ The PIC18F47Q10 is responsible for controlling the motor via SPI communication. 
 - SCK (Serial Clock)
 - SI (Serial Input)
 - SO (Serial Output)
+  
 Additionally, the PIC has two UART pins:
 - RX (Receiver) connected to the Connector IN via ribbon cable
 - TX (Transmitter) connected to the Connector OUT via ribbon cable
