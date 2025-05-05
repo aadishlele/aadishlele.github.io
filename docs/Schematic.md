@@ -13,6 +13,9 @@ EGR314 Motor Driver Subsystem PCB:
 PCB Top View:  
 ![Image](https://github.com/user-attachments/assets/46d92fa4-020f-4745-baa7-ae3f704e8539)
 
+PCB Bottom View:  
+![Image](https://github.com/user-attachments/assets/e3679142-1249-4cea-b62b-174048852221)
+
 
 
 
