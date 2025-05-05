@@ -19,7 +19,7 @@
 
 ## **Messages My Subsystem Sends & Receives**
 
-### **Message Type 1 – Motor Direection Command**
+### **Message Type 1 – Motor Direction Command**
 
 | Byte | Variable Name | Data Type | Min Value | Max Value | Example |
 | ----- | ----- | ----- | ----- | ----- | ----- |
