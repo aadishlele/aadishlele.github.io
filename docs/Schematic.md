@@ -18,6 +18,9 @@ Important Links:
 EGR314 Motor Driver Subsystem PDF file
 [SCHEMATIC.pdf](https://github.com/user-attachments/files/19829832/SCHEMATIC.pdf)
 
+EGR314 PCB Gerber file zip:
+[PCB_gerber.zip](https://github.com/user-attachments/files/20045509/PCB_gerber.zip)
+
 
 
 
