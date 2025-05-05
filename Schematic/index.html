@@ -520,6 +520,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#functional-analysis-of-the-schematic-meeting-user-needs-and-product-specs" class="md-nav__link">
+    Functional Analysis of the Schematic: Meeting User Needs and Product Specs
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -602,6 +609,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#functional-analysis-of-the-schematic-meeting-user-needs-and-product-specs" class="md-nav__link">
+    Functional Analysis of the Schematic: Meeting User Needs and Product Specs
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -625,8 +639,6 @@
   
 
 
-  <h1>Schematic</h1>
-
 <h2 id="schematic-design-of-motor-driver-subsystem">Schematic design of Motor driver Subsystem</h2>
 <p>EGR314 Aadish Lele Schematic
 <a class="glightbox" href="https://github.com/user-attachments/assets/c7163d30-6a1a-4427-86f4-89c7ff576e49" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/c7163d30-6a1a-4427-86f4-89c7ff576e49" /></a></p>
@@ -641,6 +653,67 @@
 <a href="https://github.com/user-attachments/files/19829832/SCHEMATIC.pdf">SCHEMATIC.pdf</a></p>
 <p>EGR314 PCB Gerber file zip:
 <a href="https://github.com/user-attachments/files/20045509/PCB_gerber.zip">PCB_gerber.zip</a></p>
+<h1 id="functional-analysis-of-the-schematic-meeting-user-needs-and-product-specs">Functional Analysis of the Schematic: Meeting User Needs and Product Specs</h1>
+<p>The schematic is a clear-cut hardware design created in Altium Designer, consisting of several neatly labeled sections. It integrates power regulation, SPI motor control, UART comms, and programming/debugging functionality to achieve the main goal: demonstrating how temperature change can dynamically control motor rotation within a modular, STEM-themed display.  </p>
+<ol>
+<li>Neatly Sectionalized Structure for Modularity and Debugging<br />
+The schematic is divided into headed blocks capturing functional areas:  </li>
+<li>Switching Voltage Regulator  </li>
+<li>Motor Driver  </li>
+<li>PIC18F47Q10 Microcontroller  </li>
+<li>Ribbon UART &amp; Power Connectors  </li>
+<li>Snap Programmer Header  </li>
+<li>Test Points  </li>
+<li>Debug LEDs</li>
+</ol>
+<p>The compartmentalization of the schematic makes it easy to understand, modify, and debug—key product specifications in tutorial and interactive systems. Net labels like CSN, SCK, SI, and SO also make tracing communication lines from section to section easy.  </p>
+<ol>
+<li>Motor Driver Control via SPI – Real-Time Actuation<br />
+The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:</li>
+<li>CSN (Chip Select)  </li>
+<li>SCK (Clock)  </li>
+<li>SI (Serial Input)  </li>
+<li>
+<p>SO (Serial Output)<br />
+OUT1 and OUT2 motor outputs are connected to test points for easy probing or direct connection to motors. The outputs are driven from temperature inputs, addressing the requirement of actuating from sensor-driven information—a critical user need in control systems and embedded engineering.  </p>
+</li>
+<li>
+<p>UART Data Reception – Sensor PCB Integration<br />
+There are two ribbon connectors (CONN_IN and CONN_OUT) for UART data on the schematic:  </p>
+</li>
+<li>CONN_IN: accepts RX data from an external temperature sensor PCB.  </li>
+<li>CONN_OUT: transmits TX data, maybe as status or feedback.  </li>
+</ol>
+<p>The UART interface addresses the requirement for inter-device communication and sensor integration modularity, which is crucial for scalable and pedagogically significant hardware demonstrations.  </p>
+<ol>
+<li>Switching Regulator-Based Power Management:  <br />
+A specialized AP62300WU-7 switching voltage regulator controls input voltage to a reliable 5V supply used throughout the circuit. This delivers:</li>
+<li>Power efficiency</li>
+<li>Smooth operation of the PIC and motor driver</li>
+<li>Protection from undervoltage conditions</li>
+<li>
+<p>Smooth power delivery allows for extended use in display applications without overheating or noise interference.</p>
+</li>
+<li>
+<p>Onboard Programming and Debugging:<br />
+The schematic includes:  </p>
+</li>
+<li>An 8-pin Snap Programmer header for programming code into the PIC18F47Q10.  </li>
+<li>A pull-up resistor and decoupling cap MCLR circuit for proper reset operation.  </li>
+<li>Test points on key SPI and ICSP lines.  </li>
+<li>Debugging LEDs (LED-PIC and LED-Power Debug) tied to GPIOs for providing instant visual feedback of device status.  </li>
+</ol>
+<p>All the above cater to the user's need for ease of development, testability, and debuggability, which are critical in academic and prototyping environments.</p>
+<ol>
+<li>Educational Demonstrability and Interactivity<br />
+By allowing users to:</li>
+<li>Watch LED indicators,</li>
+<li>Connect motors directly via test points, debugging is simplified, and activities can be directly understood.</li>
+<li>Send and receive UART messages,</li>
+<li>And display behavior as a reaction to temperature, the schematic satisfies product requirements for a STEM-themed, interactive physical system that clearly and effectively demonstrates embedded concepts.  </li>
+</ol>
+<p>Conclusion<br />
+The functionality of this schematic is carefully crafted to meet technical as well as educational purposes. It demonstrates good system modularity, effective real-time control, standard communication protocols and clear visual feedback mechanisms. All of which are directly in accordance with the needs of students, teachers, and users viewing the project as part of an internet-enabled, interactive STEM exhibition. The design is sound and pedagogically effective, evidencing good engineering practice and thoughtful system integration.  </p>
 
 
 
