@@ -80,3 +80,52 @@ The functionality of this schematic is carefully crafted to meet technical as we
 
 # Team Design and Decision making process
 Our team designed this final design of the PCB after many iterations of switching component libraries, updating footprints and ordering them in 2 batches. The PCB is designed on 100 mm X 100 mm board size and is a 2 layer PCB with VIAs. In this schematic and pcb we decied to use the same voltage regulator for easier functionality to integrate both of the PCBs to get the sensor actuator system functioning correctly.
+
+
+# Version 2.0 Improvements
+Proposed Improvements for Version 2 of the Schematic and PCB
+If I were to create a Version 2 of the schematic and PCB, I would focus on improving both the functionality and efficiency of the design, with an emphasis on readability, manufacturability, and professional presentation. The following enhancements would be implemented:
+
+1. Improved Use of Netlabels for Clarity
+While the current design does include some netlabels, Version 2 would fully standardize their use across all signal and power lines. This would:
+- Reduce visual clutter from long, overlapping wires.
+- Make the schematic cleaner and easier to read.
+- Improve traceability between different schematic blocks.
+- Using consistent and descriptive netlabel naming conventions (e.g., UART_TX, SPI_CLK, PWM_OUT) would further simplify debugging and documentation.
+
+2. Simplified and More Intuitive Wiring
+To enhance circuit readability, I would reorganize component placement to minimize crossovers and tightly group related components. This would:
+- Help new users or reviewers quickly understand signal flow.
+- Reduce confusion when editing or expanding the schematic later.
+- Allow easier schematic-to-PCB correlation during layout.
+
+3. Smaller PCB Footprint for Cost Efficiency
+For Version 2 of the PCB, I would optimize the board layout to reduce the physical size of the PCB without compromising performance. This includes:
+- Compact placement of passive components.
+- More efficient routing using internal layers if needed.
+ -Reconsidering connector and test point placement to save space.
+
+  A smaller board results in:
+  - Lower fabrication costs (especially in volume).
+  - Shorter manufacturing time.
+  - Potentially better mechanical integration into enclosures or displays.
+
+4. Improved Silkscreen and Labeling
+Clear component labels and functional annotations on the silkscreen layer would be added to:
+- Help identify test points, headers, and polarity.
+- Assist with manual assembly or inspection.
+- Improve the user experience in educational or demonstration settings.
+
+5. Potential Expansion Headers:
+To future-proof the design, I may include additional headers or expansion points in Version 2 for:
+- Extra UART/SPI/I2C peripherals.
+- Future sensor inputs.
+- Power monitoring or wireless modules.
+
+Summary
+In summary, Version 2 of the schematic and PCB would emphasize:
+- Better organization through full netlabel use.
+- Cleaner schematic layout with simplified wiring.
+- Smaller, cost-efficient PCB size.
+- Enhanced usability with clear labeling and expansion options.
+These improvements would lead to a more professional, maintainable, and scalable design while continuing to support the project's STEM and educational goals.
