@@ -527,6 +527,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#team-design-and-decision-making-process" class="md-nav__link">
+    Team Design and Decision making process
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -616,6 +623,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#team-design-and-decision-making-process" class="md-nav__link">
+    Team Design and Decision making process
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -667,53 +681,41 @@ The schematic is divided into headed blocks capturing functional areas:  </li>
 <li>Debug LEDs</li>
 </ol>
 <p>The compartmentalization of the schematic makes it easy to understand, modify, and debug—key product specifications in tutorial and interactive systems. Net labels like CSN, SCK, SI, and SO also make tracing communication lines from section to section easy.  </p>
-<ol>
-<li>Motor Driver Control via SPI – Real-Time Actuation<br />
-The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:</li>
-<li>CSN (Chip Select)  </li>
-<li>SCK (Clock)  </li>
-<li>SI (Serial Input)  </li>
-<li>
-<p>SO (Serial Output)<br />
+<p>Motor Driver Control via SPI – Real-Time Actuation<br />
+The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:
+- CSN (Chip Select)<br />
+- SCK (Clock)<br />
+- SI (Serial Input)<br />
+- SO (Serial Output)<br />
 OUT1 and OUT2 motor outputs are connected to test points for easy probing or direct connection to motors. The outputs are driven from temperature inputs, addressing the requirement of actuating from sensor-driven information—a critical user need in control systems and embedded engineering.  </p>
-</li>
-<li>
 <p>UART Data Reception – Sensor PCB Integration<br />
-There are two ribbon connectors (CONN_IN and CONN_OUT) for UART data on the schematic:  </p>
-</li>
-<li>CONN_IN: accepts RX data from an external temperature sensor PCB.  </li>
-<li>CONN_OUT: transmits TX data, maybe as status or feedback.  </li>
-</ol>
+There are two ribbon connectors (CONN_IN and CONN_OUT) for UART data on the schematic:<br />
+- CONN_IN: accepts RX data from an external temperature sensor PCB.<br />
+- CONN_OUT: transmits TX data, maybe as status or feedback.  </p>
 <p>The UART interface addresses the requirement for inter-device communication and sensor integration modularity, which is crucial for scalable and pedagogically significant hardware demonstrations.  </p>
-<ol>
-<li>Switching Regulator-Based Power Management:  <br />
-A specialized AP62300WU-7 switching voltage regulator controls input voltage to a reliable 5V supply used throughout the circuit. This delivers:</li>
-<li>Power efficiency</li>
-<li>Smooth operation of the PIC and motor driver</li>
-<li>Protection from undervoltage conditions</li>
-<li>
-<p>Smooth power delivery allows for extended use in display applications without overheating or noise interference.</p>
-</li>
-<li>
+<p>Switching Regulator-Based Power Management:  <br />
+A specialized AP62300WU-7 switching voltage regulator controls input voltage to a reliable 5V supply used throughout the circuit. This delivers:
+- Power efficiency
+- Smooth operation of the PIC and motor driver
+- Protection from undervoltage conditions
+- Smooth power delivery allows for extended use in display applications without overheating or noise interference.</p>
 <p>Onboard Programming and Debugging:<br />
-The schematic includes:  </p>
-</li>
-<li>An 8-pin Snap Programmer header for programming code into the PIC18F47Q10.  </li>
-<li>A pull-up resistor and decoupling cap MCLR circuit for proper reset operation.  </li>
-<li>Test points on key SPI and ICSP lines.  </li>
-<li>Debugging LEDs (LED-PIC and LED-Power Debug) tied to GPIOs for providing instant visual feedback of device status.  </li>
-</ol>
+The schematic includes:<br />
+- An 8-pin Snap Programmer header for programming code into the PIC18F47Q10.<br />
+- A pull-up resistor and decoupling cap MCLR circuit for proper reset operation.<br />
+- Test points on key SPI and ICSP lines.<br />
+- Debugging LEDs (LED-PIC and LED-Power Debug) tied to GPIOs for providing instant visual feedback of device status.  </p>
 <p>All the above cater to the user's need for ease of development, testability, and debuggability, which are critical in academic and prototyping environments.</p>
-<ol>
-<li>Educational Demonstrability and Interactivity<br />
-By allowing users to:</li>
-<li>Watch LED indicators,</li>
-<li>Connect motors directly via test points, debugging is simplified, and activities can be directly understood.</li>
-<li>Send and receive UART messages,</li>
-<li>And display behavior as a reaction to temperature, the schematic satisfies product requirements for a STEM-themed, interactive physical system that clearly and effectively demonstrates embedded concepts.  </li>
-</ol>
+<p>Educational Demonstrability and Interactivity<br />
+By allowing users to:
+- Watch LED indicators,
+- Connect motors directly via test points, debugging is simplified, and activities can be directly understood.
+- Send and receive UART messages,
+- And display behavior as a reaction to temperature, the schematic satisfies product requirements for a STEM-themed, interactive physical system that clearly and effectively demonstrates embedded concepts.  </p>
 <p>Conclusion<br />
 The functionality of this schematic is carefully crafted to meet technical as well as educational purposes. It demonstrates good system modularity, effective real-time control, standard communication protocols and clear visual feedback mechanisms. All of which are directly in accordance with the needs of students, teachers, and users viewing the project as part of an internet-enabled, interactive STEM exhibition. The design is sound and pedagogically effective, evidencing good engineering practice and thoughtful system integration.  </p>
+<h1 id="team-design-and-decision-making-process">Team Design and Decision making process</h1>
+<p>Our team designed this final design of the PCB after many iterations of switching component libraries, updating footprints and ordering them in 2 batches. The PCB is designed on 100 mm X 100 mm board size and is a 2 layer PCB with VIAs. In this schematic and pcb we decied to use the same voltage regulator for easier functionality to integrate both of the PCBs to get the sensor actuator system functioning correctly.</p>
 
 
 
