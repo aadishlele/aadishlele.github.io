@@ -78,5 +78,5 @@ By allowing users to:
 Conclusion  
 The functionality of this schematic is carefully crafted to meet technical as well as educational purposes. It demonstrates good system modularity, effective real-time control, standard communication protocols and clear visual feedback mechanisms. All of which are directly in accordance with the needs of students, teachers, and users viewing the project as part of an internet-enabled, interactive STEM exhibition. The design is sound and pedagogically effective, evidencing good engineering practice and thoughtful system integration.  
 
-#Team Design and Decision making process
+# Team Design and Decision making process
 Our team designed this final design of the PCB after many iterations of switching component libraries, updating footprints and ordering them in 2 batches. The PCB is designed on 100 mm X 100 mm board size and is a 2 layer PCB with VIAs. In this schematic and pcb we decied to use the same voltage regulator for easier functionality to integrate both of the PCBs to get the sensor actuator system functioning correctly.
