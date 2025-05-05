@@ -6,7 +6,6 @@ EGR314 Individual Block Diagram
 EGR314 Individual Block Diagram PDF:
 [BLOCKDIAGRAM.pdf](https://github.com/user-attachments/files/19830142/BLOCKDIAGRAM.pdf)
 
-
 # Selection process and explaination
 The Motor Driver PCB block diagram is organized into three primary sections: Connections, Motor Driver, and the PIC18F47Q10 Microcontroller.
 
