@@ -14,13 +14,13 @@ This component features two output pins that connect directly to the motor, enab
 
 **PIC18F47Q10 Microcontroller Section**:
 The PIC18F47Q10 is responsible for controlling the motor via SPI communication. It connects to the motor driver through four SPI pins:  
-- CSN (Chip Select)  
-- SCK (Serial Clock)  
-- SI (Serial Input)  
-- SO (Serial Output)   
+    - CSN (Chip Select)  
+    - SCK (Serial Clock)  
+    - SI (Serial Input)  
+    - SO (Serial Output)   
 Additionally, the PIC has two UART pins:    
--  RX (Receiver) connected to the Connector IN via ribbon cable   
--  TX (Transmitter) connected to the Connector OUT via ribbon cable   
+    -  RX (Receiver) connected to the Connector IN via ribbon cable   
+    -  TX (Transmitter) connected to the Connector OUT via ribbon cable   
 
 **Connections Section**:  
 This section contains the ribbon cable interfaces for UART communication. The RX pin receives incoming data via the Connector IN, and the TX pin sends outgoing data via the Connector OUT.  
