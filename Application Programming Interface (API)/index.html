@@ -932,17 +932,17 @@
 <h1 id="define-fwd_cmd-0b11101111">define FWD_CMD 0b11101111</h1>
 <h1 id="define-rev_cmd-0b11101101">define REV_CMD 0b11101101</h1>
 <h1 id="define-off_cmd-0b11100000">define OFF_CMD 0b11100000</h1>
-<p>void send_uart_message(const char* msg) {
-    for (uint8_t i = 0; i &lt; 8; i++) {
-        while (!EUSART1_is_tx_ready());
-        EUSART1_Write(msg[i]);
-    }
+<p>void send_uart_message(const char* msg) {<br />
+    for (uint8_t i = 0; i &lt; 8; i++) {<br />
+        while (!EUSART1_is_tx_ready());<br />
+        EUSART1_Write(msg[i]);<br />
+    }<br />
+}  </p>
+<p>void send_confirmation(char action) {<br />
+    char msg[8] = { 'F', 'S', 'A', 'S', '0', action, 'F', 'S' };<br />
+    send_uart_message(msg);<br />
 }</p>
-<p>void send_confirmation(char action) {
-    char msg[8] = { 'F', 'S', 'A', 'S', '0', action, 'F', 'S' };
-    send_uart_message(msg);
-}</p>
-<p>void main(void) 
+<p>void main(void)<br />
 {</p>
 <pre><code>SYSTEM_Initialize();
 SPI1_Open(SPI1_DEFAULT);
