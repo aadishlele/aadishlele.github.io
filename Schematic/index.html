@@ -557,6 +557,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#schematic-layout" class="md-nav__link">
+    Schematic Layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-layout-and-images" class="md-nav__link">
+    PCB Layout and Images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#functional-analysis-of-the-schematic-meeting-user-needs-and-product-specs" class="md-nav__link">
     Functional Analysis of the Schematic: Meeting User Needs and Product Specs
   </a>
@@ -660,6 +674,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#schematic-layout" class="md-nav__link">
+    Schematic Layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-layout-and-images" class="md-nav__link">
+    PCB Layout and Images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#functional-analysis-of-the-schematic-meeting-user-needs-and-product-specs" class="md-nav__link">
     Functional Analysis of the Schematic: Meeting User Needs and Product Specs
   </a>
@@ -704,14 +732,20 @@
 
 
 <h2 id="schematic-design-of-motor-driver-subsystem">Schematic design of Motor driver Subsystem</h2>
+<h1 id="schematic-layout">Schematic Layout</h1>
 <p>EGR314 Aadish Lele Schematic
 <a class="glightbox" href="https://github.com/user-attachments/assets/c7163d30-6a1a-4427-86f4-89c7ff576e49" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/c7163d30-6a1a-4427-86f4-89c7ff576e49" /></a></p>
+<h1 id="pcb-layout-and-images">PCB Layout and Images</h1>
 <p>EGR314 Motor Driver Subsystem PCB:
 <a class="glightbox" href="https://github.com/user-attachments/assets/8655c729-7e94-434b-9340-f5c528838998" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/8655c729-7e94-434b-9340-f5c528838998" /></a></p>
 <p>PCB Top View:<br />
 <a class="glightbox" href="https://github.com/user-attachments/assets/46d92fa4-020f-4745-baa7-ae3f704e8539" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/46d92fa4-020f-4745-baa7-ae3f704e8539" /></a></p>
 <p>PCB Bottom View:<br />
 <a class="glightbox" href="https://github.com/user-attachments/assets/e3679142-1249-4cea-b62b-174048852221" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/e3679142-1249-4cea-b62b-174048852221" /></a></p>
+<p>PCB Picture 1:<br />
+<a class="glightbox" href="https://github.com/user-attachments/assets/49e72448-2aca-4d74-bb85-e5b8b3d1b57e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/49e72448-2aca-4d74-bb85-e5b8b3d1b57e" /></a></p>
+<p>PCB Picture 2:<br />
+<a class="glightbox" href="https://github.com/user-attachments/assets/fd9190a4-9300-4f19-935d-92c422a6a897" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/fd9190a4-9300-4f19-935d-92c422a6a897" /></a></p>
 <p>Important Links:  </p>
 <p>EGR314 Motor Driver Subsystem PDF file
 <a href="https://github.com/user-attachments/files/19829832/SCHEMATIC.pdf">SCHEMATIC.pdf</a></p>
@@ -723,12 +757,14 @@
 <p><strong>Neatly Sectionalized Structure for Modularity and Debugging</strong>  <br />
 The schematic is divided into headed blocks capturing functional areas:<br />
   - Switching Voltage Regulator<br />
-  - Motor Driver<br />
-  - PIC18F47Q10 Microcontroller<br />
-  - Ribbon UART &amp; Power Connectors<br />
-  - Snap Programmer Header<br />
-  - Test Points<br />
-  - Debug LEDs</p>
+  - Motor Driver  </p>
+<ul>
+<li>PIC18F47Q10 Microcontroller  </li>
+<li>Ribbon UART &amp; Power Connectors  </li>
+<li>Snap Programmer Header  </li>
+<li>Test Points  </li>
+<li>Debug LEDs</li>
+</ul>
 <p>The compartmentalization of the schematic makes it easy to understand, modify, and debug—key product specifications in tutorial and interactive systems. Net labels like CSN, SCK, SI, and SO also make tracing communication lines from section to section easy.  </p>
 <p><strong>Motor Driver Control via SPI – Real-Time Actuation</strong>  <br />
 The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:
