@@ -1,9 +1,11 @@
 
 ## Schematic design of Motor driver Subsystem
 
+# Schematic Layout  
 EGR314 Aadish Lele Schematic
 ![Image](https://github.com/user-attachments/assets/c7163d30-6a1a-4427-86f4-89c7ff576e49)
 
+# PCB Layout and Images
 EGR314 Motor Driver Subsystem PCB:
 ![Image](https://github.com/user-attachments/assets/8655c729-7e94-434b-9340-f5c528838998)
 
@@ -12,6 +14,12 @@ PCB Top View:
 
 PCB Bottom View:  
 ![Image](https://github.com/user-attachments/assets/e3679142-1249-4cea-b62b-174048852221)
+
+PCB Picture 1:  
+![Image](https://github.com/user-attachments/assets/49e72448-2aca-4d74-bb85-e5b8b3d1b57e)
+
+PCB Picture 2:  
+![Image](https://github.com/user-attachments/assets/fd9190a4-9300-4f19-935d-92c422a6a897)
 
 Important Links:  
 
@@ -24,6 +32,7 @@ EGR314 PCB Gerber file zip:
 Gerber files [Gerber.zip](https://github.com/user-attachments/files/20052061/Gerber.zip)
 
 
+
 # Functional Analysis of the Schematic: Meeting User Needs and Product Specs
 The schematic is a clear-cut hardware design created in Altium Designer, consisting of several neatly labeled sections. It integrates power regulation, SPI motor control, UART comms, and programming/debugging functionality to achieve the main goal: demonstrating how temperature change can dynamically control motor rotation within a modular, STEM-themed display.  
 
@@ -31,6 +40,7 @@ The schematic is a clear-cut hardware design created in Altium Designer, consist
 The schematic is divided into headed blocks capturing functional areas:  
   - Switching Voltage Regulator  
   - Motor Driver  
+
   - PIC18F47Q10 Microcontroller  
   - Ribbon UART & Power Connectors  
   - Snap Programmer Header  
