@@ -44,30 +44,30 @@
 **Function:** Updates the motor speed in Aadish’s motor driver system.
 
 ## **Message Handling Code**
+ 
+#include "mcc_generated_files/mcc.h"  
+#include "mcc_generated_files/spi1.h"  
 
-#include "mcc_generated_files/mcc.h"
-#include "mcc_generated_files/spi1.h"
+#define MY_ID 'A'  
+ 
+#define FWD_CMD 0b11101111  
+#define REV_CMD 0b11101101  
+#define OFF_CMD 0b11100000  
 
-#define MY_ID 'A'
-
-#define FWD_CMD 0b11101111
-#define REV_CMD 0b11101101
-#define OFF_CMD 0b11100000
-
-void send_uart_message(const char* msg) {
-    for (uint8_t i = 0; i < 8; i++) {
-        while (!EUSART1_is_tx_ready());
-        EUSART1_Write(msg[i]);
-    }
+void send_uart_message(const char* msg) {  
+    for (uint8_t i = 0; i < 8; i++) {  
+        while (!EUSART1_is_tx_ready());  
+        EUSART1_Write(msg[i]);  
+    }  
+}  
+  
+void send_confirmation(char action) {  
+    char msg[8] = { 'F', 'S', 'A', 'S', '0', action, 'F', 'S' };  
+    send_uart_message(msg);  
 }
 
-void send_confirmation(char action) {
-    char msg[8] = { 'F', 'S', 'A', 'S', '0', action, 'F', 'S' };
-    send_uart_message(msg);
-}
 
-
-void main(void) 
+void main(void)  
 {
 
     SYSTEM_Initialize();
