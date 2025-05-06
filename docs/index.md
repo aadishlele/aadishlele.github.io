@@ -9,7 +9,7 @@ I am part of Team 309A in EGR 314. Our main porject is making a spinning top tha
 
 
 This is the Team Website:
-[Team 309A Website Link](https://egr314-team-309a.github.io/EGR314_TEAM309A.github.io/)
+[Team 309A Website Link](https://egr314-team-309a.github.io/)
 
 Team Members and their webites:     
 - [Aadish Website - Actuator](https://aadishlele.github.io/)   
