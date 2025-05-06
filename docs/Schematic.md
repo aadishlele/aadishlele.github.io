@@ -38,6 +38,7 @@ The schematic is a clear-cut hardware design created in Altium Designer, consist
 
 **Neatly Sectionalized Structure for Modularity and Debugging**    
 The schematic is divided into headed blocks capturing functional areas:   
+
 - Switching Voltage Regulator
     
 - Motor Driver
@@ -55,7 +56,8 @@ The schematic is divided into headed blocks capturing functional areas:
 The compartmentalization of the schematic makes it easy to understand, modify, and debug—key product specifications in tutorial and interactive systems. Net labels like CSN, SCK, SI, and SO also make tracing communication lines from section to section easy.  
 
 **Motor Driver Control via SPI – Real-Time Actuation**    
-The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:
+The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:  
+
 - CSN (Chip Select)
     
 - SCK (Clock)
@@ -69,7 +71,8 @@ The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:
 The outputs are driven from temperature inputs, addressing the requirement of actuating from sensor-driven information—a critical user need in control systems and embedded engineering.  
 
 UART Data Reception – Sensor PCB Integration  
-There are two ribbon connectors (CONN_IN and CONN_OUT) for UART data on the schematic:  
+There are two ribbon connectors (CONN_IN and CONN_OUT) for UART data on the schematic:    
+
 - CONN_IN: accepts RX data from an external temperature sensor PCB.
    
 - CONN_OUT: transmits TX data, maybe as status or feedback.  
@@ -77,7 +80,8 @@ There are two ribbon connectors (CONN_IN and CONN_OUT) for UART data on the sche
 The UART interface addresses the requirement for inter-device communication and sensor integration modularity, which is crucial for scalable and pedagogically significant hardware demonstrations.  
 
 **Switching Regulator-Based Power Management**:      
-A specialized AP62300WU-7 switching voltage regulator controls input voltage to a reliable 5V supply used throughout the circuit. This delivers:
+A specialized AP62300WU-7 switching voltage regulator controls input voltage to a reliable 5V supply used throughout the circuit. This delivers:  
+
   - Power efficiency
     
   - Smooth operation of the PIC and motor driver
@@ -88,7 +92,8 @@ A specialized AP62300WU-7 switching voltage regulator controls input voltage to 
     
 
 **Onboard Programming and Debugging:**    
-The schematic includes:  
+The schematic includes:    
+
   - An 8-pin Snap Programmer header for programming code into the PIC18F47Q10.
     
   - A pull-up resistor and decoupling cap MCLR circuit for proper reset operation.
@@ -101,7 +106,8 @@ The schematic includes:
 All the above cater to the user's need for ease of development, testability, and debuggability, which are critical in academic and prototyping environments.
 
 **Educational Demonstrability and Interactivity**    
-By allowing users to:
+By allowing users to:  
+
   - Watch LED indicators,
     
   - Connect motors directly via test points, debugging is simplified, and activities can be directly understood.
@@ -131,7 +137,8 @@ While the current design does include some netlabels, Version 2 would fully stan
 - Using consistent and descriptive netlabel naming conventions (e.g., UART_TX, SPI_CLK, PWM_OUT) would further simplify debugging and documentation.  
 
 **Simplified and More Intuitive Wiring**  
-To enhance circuit readability, I would reorganize component placement to minimize crossovers and tightly group related components. This would:  
+To enhance circuit readability, I would reorganize component placement to minimize crossovers and tightly group related components. This would:   
+
 - Help new users or reviewers quickly understand signal flow.
   
 - Reduce confusion when editing or expanding the schematic later.
@@ -139,13 +146,15 @@ To enhance circuit readability, I would reorganize component placement to minimi
 - Allow easier schematic-to-PCB correlation during layout.  
 
 **Smaller PCB Footprint for Cost Efficiency**  
-For Version 2 of the PCB, I would optimize the board layout to reduce the physical size of the PCB without compromising performance. This includes:  
+For Version 2 of the PCB, I would optimize the board layout to reduce the physical size of the PCB without compromising performance. This includes:   
+
 - Compact placement of passive components.
   
 - More efficient routing using internal layers if needed.
   
 - Reconsidering connector and test point placement to save space.  
-A smaller board results in:  
+A smaller board results in:
+
 - Lower fabrication costs (especially in volume).
   
 - Shorter manufacturing time.
@@ -154,6 +163,7 @@ A smaller board results in:
 
 **Improved Silkscreen and Labeling**
 Clear component labels and functional annotations on the silkscreen layer would be added to:  
+
 - Help identify test points, headers, and polarity.
   
 - Assist with manual assembly or inspection.
@@ -162,6 +172,7 @@ Clear component labels and functional annotations on the silkscreen layer would 
 
 **Potential Expansion Headers:**
 To future-proof the design, I may include additional headers or expansion points in Version 2 for:  
+
 - Extra UART/SPI/I2C peripherals.
   
 - Future sensor inputs.
@@ -169,7 +180,8 @@ To future-proof the design, I may include additional headers or expansion points
 - Power monitoring or wireless modules.  
 
 **Summary**  
-In summary, Version 2 of the schematic and PCB would emphasize:  
+In summary, Version 2 of the schematic and PCB would emphasize: 
+
 - Better organization through full netlabel use.
   
 - Cleaner schematic layout with simplified wiring.
