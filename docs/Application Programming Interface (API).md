@@ -1,11 +1,11 @@
-# **API**
+# **Application Programming Interface**
 
 ## **User ID Assignments**
 
 | User | User ID |
 | ----- | ----- |
-| **Aadish** | **A** |
-| Shaurya | S |
+| **Aadish** | **0xFD** |
+| Shaurya | 0xFC |
 
 ## **Message Structure**
 
@@ -17,31 +17,37 @@
 | 5-6 | **Data** | `uint16_t` | Message-specific data |
 | 7-8 | **Suffix** | `uint16_t` | Message end identifier |
 
-## **Messages My Subsystem Sends & Receives**
+## **Message Types**
 
-### **Message Type 1 – Motor Direction Command**
+### **Message Type 1 – Motor Direction Command (Sent from Shaurya to Aadish) **
 
-| Byte | Variable Name | Data Type | Min Value | Max Value | Example |
-| ----- | ----- | ----- | ----- | ----- | ----- |
-| 1-2 | `prefix` | `uint16_t` | 0x0001 | 0x0001 | 0x0001 |
-| 3 | `sender_id` | `uint8_t` | 0xFF | 0xFF | 0xFF |
-| 4 | `receiver_id` | `uint8_t` | 0xFD | 0xFD | 0xFD |
-| 5-6 | `motor_direction` | `uint16_t` | 0x40 (Forward) | 0x41 (Reverse) | 0x40 |
-| 7-8 | `suffix` | `uint16_t` | 0x0020 | 0x0020 | 0x0020 |
+| Condition           | Message ID | Meaning        |
+|---------------------|------------|----------------|
+| Temp ≤ 25°C         | 0x01       | Motor Forward  |
+| 25°C < Temp ≤ 30°C  | 0x02       | Motor Reverse  |
+| Temp > 30°C         | 0x03       | Motor Off      |
 
 **Function:** Commands Aadish to change motor direction.
 
-### **Message Type 2 – Acknowledgement**
+### **Message Type 2 – Acknowledgement (Sent from Aadish to Shaurya)**
 
-| Byte | Variable Name | Data Type | Min Value | Max Value | Example |
-| ----- | ----- | ----- | ----- | ----- | ----- |
-| 1-2 | `prefix` | `uint16_t` | 0x0002 | 0x0002 | 0x0002 |
-| 3 | `sender_id` | `uint8_t` | 0xFC | 0xFC | 0xFC |
-| 4 | `receiver_id` | `uint8_t` | 0xFD | 0xFD | 0xFD |
-| 5-6 | `motor_speed` | `uint16_t` | 0x42 (Increase) | 0x43 (Decrease) | 0x42 |
-| 7-8 | `suffix` | `uint16_t` | 0x0021 | 0x0021 | 0x0021 |
+| Message ID | Meaning                                  |
+|------------|-------------------------------------------|
+| 0x01       | Motor Forward Confirmation – Blink RB0    |
+| 0x02       | Motor Reverse Confirmation – Blink RB4    |
+| 0x03       | Motor Off Confirmation – Blink RB0 & RB4  |
 
 **Function:** Updates the motor speed in Aadish’s motor driver system.
+
+### Serial Message Format
+
+| Field        | Example (Motor Forward) |
+|--------------|--------------------------|
+| Prefix       | FS                       |
+| Sender ID    | S                        |
+| Receiver ID  | A                        |
+| Data         | 01 (Forward)             |
+| Suffix       | FS                       |
 
 ## **Message Handling Code**  
   
