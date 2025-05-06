@@ -755,9 +755,11 @@
 <h1 id="functional-analysis-of-the-schematic-meeting-user-needs-and-product-specs">Functional Analysis of the Schematic: Meeting User Needs and Product Specs</h1>
 <p>The schematic is a clear-cut hardware design created in Altium Designer, consisting of several neatly labeled sections. It integrates power regulation, SPI motor control, UART comms, and programming/debugging functionality to achieve the main goal: demonstrating how temperature change can dynamically control motor rotation within a modular, STEM-themed display.  </p>
 <p><strong>Neatly Sectionalized Structure for Modularity and Debugging</strong>  <br />
-The schematic is divided into headed blocks capturing functional areas: <br />
-- Switching Voltage Regulator</p>
+The schematic is divided into headed blocks capturing functional areas:   </p>
 <ul>
+<li>
+<p>Switching Voltage Regulator</p>
+</li>
 <li>
 <p>Motor Driver</p>
 </li>
@@ -779,9 +781,11 @@ The schematic is divided into headed blocks capturing functional areas: <br />
 </ul>
 <p>The compartmentalization of the schematic makes it easy to understand, modify, and debug—key product specifications in tutorial and interactive systems. Net labels like CSN, SCK, SI, and SO also make tracing communication lines from section to section easy.  </p>
 <p><strong>Motor Driver Control via SPI – Real-Time Actuation</strong>  <br />
-The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:
-- CSN (Chip Select)</p>
+The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:  </p>
 <ul>
+<li>
+<p>CSN (Chip Select)</p>
+</li>
 <li>
 <p>SCK (Clock)</p>
 </li>
@@ -797,16 +801,22 @@ The IFX9201SGAUMA1 motor driver talks to the PIC18F47Q10 using four SPI signals:
 </ul>
 <p>The outputs are driven from temperature inputs, addressing the requirement of actuating from sensor-driven information—a critical user need in control systems and embedded engineering.  </p>
 <p>UART Data Reception – Sensor PCB Integration<br />
-There are two ribbon connectors (CONN_IN and CONN_OUT) for UART data on the schematic:<br />
-- CONN_IN: accepts RX data from an external temperature sensor PCB.</p>
+There are two ribbon connectors (CONN_IN and CONN_OUT) for UART data on the schematic:    </p>
 <ul>
-<li>CONN_OUT: transmits TX data, maybe as status or feedback.  </li>
+<li>
+<p>CONN_IN: accepts RX data from an external temperature sensor PCB.</p>
+</li>
+<li>
+<p>CONN_OUT: transmits TX data, maybe as status or feedback.  </p>
+</li>
 </ul>
 <p>The UART interface addresses the requirement for inter-device communication and sensor integration modularity, which is crucial for scalable and pedagogically significant hardware demonstrations.  </p>
 <p><strong>Switching Regulator-Based Power Management</strong>:    <br />
-A specialized AP62300WU-7 switching voltage regulator controls input voltage to a reliable 5V supply used throughout the circuit. This delivers:
-  - Power efficiency</p>
+A specialized AP62300WU-7 switching voltage regulator controls input voltage to a reliable 5V supply used throughout the circuit. This delivers:  </p>
 <ul>
+<li>
+<p>Power efficiency</p>
+</li>
 <li>
 <p>Smooth operation of the PIC and motor driver</p>
 </li>
@@ -818,9 +828,11 @@ A specialized AP62300WU-7 switching voltage regulator controls input voltage to 
 </li>
 </ul>
 <p><strong>Onboard Programming and Debugging:</strong>  <br />
-The schematic includes:<br />
-  - An 8-pin Snap Programmer header for programming code into the PIC18F47Q10.</p>
+The schematic includes:    </p>
 <ul>
+<li>
+<p>An 8-pin Snap Programmer header for programming code into the PIC18F47Q10.</p>
+</li>
 <li>
 <p>A pull-up resistor and decoupling cap MCLR circuit for proper reset operation.</p>
 </li>
@@ -833,9 +845,11 @@ The schematic includes:<br />
 </ul>
 <p>All the above cater to the user's need for ease of development, testability, and debuggability, which are critical in academic and prototyping environments.</p>
 <p><strong>Educational Demonstrability and Interactivity</strong>  <br />
-By allowing users to:
-  - Watch LED indicators,</p>
+By allowing users to:  </p>
 <ul>
+<li>
+<p>Watch LED indicators,</p>
+</li>
 <li>
 <p>Connect motors directly via test points, debugging is simplified, and activities can be directly understood.</p>
 </li>
@@ -868,9 +882,11 @@ While the current design does include some netlabels, Version 2 would fully stan
 </li>
 </ul>
 <p><strong>Simplified and More Intuitive Wiring</strong><br />
-To enhance circuit readability, I would reorganize component placement to minimize crossovers and tightly group related components. This would:<br />
-- Help new users or reviewers quickly understand signal flow.</p>
+To enhance circuit readability, I would reorganize component placement to minimize crossovers and tightly group related components. This would:   </p>
 <ul>
+<li>
+<p>Help new users or reviewers quickly understand signal flow.</p>
+</li>
 <li>
 <p>Reduce confusion when editing or expanding the schematic later.</p>
 </li>
@@ -879,15 +895,17 @@ To enhance circuit readability, I would reorganize component placement to minimi
 </li>
 </ul>
 <p><strong>Smaller PCB Footprint for Cost Efficiency</strong><br />
-For Version 2 of the PCB, I would optimize the board layout to reduce the physical size of the PCB without compromising performance. This includes:<br />
-- Compact placement of passive components.</p>
+For Version 2 of the PCB, I would optimize the board layout to reduce the physical size of the PCB without compromising performance. This includes:   </p>
 <ul>
+<li>
+<p>Compact placement of passive components.</p>
+</li>
 <li>
 <p>More efficient routing using internal layers if needed.</p>
 </li>
 <li>
 <p>Reconsidering connector and test point placement to save space.<br />
-A smaller board results in:  </p>
+A smaller board results in:</p>
 </li>
 <li>
 <p>Lower fabrication costs (especially in volume).</p>
@@ -900,9 +918,11 @@ A smaller board results in:  </p>
 </li>
 </ul>
 <p><strong>Improved Silkscreen and Labeling</strong>
-Clear component labels and functional annotations on the silkscreen layer would be added to:<br />
-- Help identify test points, headers, and polarity.</p>
+Clear component labels and functional annotations on the silkscreen layer would be added to:  </p>
 <ul>
+<li>
+<p>Help identify test points, headers, and polarity.</p>
+</li>
 <li>
 <p>Assist with manual assembly or inspection.</p>
 </li>
@@ -911,9 +931,11 @@ Clear component labels and functional annotations on the silkscreen layer would 
 </li>
 </ul>
 <p><strong>Potential Expansion Headers:</strong>
-To future-proof the design, I may include additional headers or expansion points in Version 2 for:<br />
-- Extra UART/SPI/I2C peripherals.</p>
+To future-proof the design, I may include additional headers or expansion points in Version 2 for:  </p>
 <ul>
+<li>
+<p>Extra UART/SPI/I2C peripherals.</p>
+</li>
 <li>
 <p>Future sensor inputs.</p>
 </li>
@@ -922,9 +944,11 @@ To future-proof the design, I may include additional headers or expansion points
 </li>
 </ul>
 <p><strong>Summary</strong><br />
-In summary, Version 2 of the schematic and PCB would emphasize:<br />
-- Better organization through full netlabel use.</p>
+In summary, Version 2 of the schematic and PCB would emphasize: </p>
 <ul>
+<li>
+<p>Better organization through full netlabel use.</p>
+</li>
 <li>
 <p>Cleaner schematic layout with simplified wiring.</p>
 </li>
