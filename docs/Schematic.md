@@ -21,6 +21,9 @@ EGR314 Motor Driver Subsystem PDF file
 EGR314 PCB Gerber file zip:
 [PCB_gerber.zip](https://github.com/user-attachments/files/20045509/PCB_gerber.zip)
 
+Gerber files [Gerber.zip](https://github.com/user-attachments/files/20052061/Gerber.zip)
+
+
 # Functional Analysis of the Schematic: Meeting User Needs and Product Specs
 The schematic is a clear-cut hardware design created in Altium Designer, consisting of several neatly labeled sections. It integrates power regulation, SPI motor control, UART comms, and programming/debugging functionality to achieve the main goal: demonstrating how temperature change can dynamically control motor rotation within a modular, STEM-themed display.  
 
