@@ -43,64 +43,63 @@
 
 **Function:** Updates the motor speed in Aadish’s motor driver system.
 
-## **Message Handling Code**
- 
-#include "mcc_generated_files/mcc.h"  
-#include "mcc_generated_files/spi1.h"  
-
-#define MY_ID 'A'  
- 
-#define FWD_CMD 0b11101111  
-#define REV_CMD 0b11101101  
-#define OFF_CMD 0b11100000  
-
-void send_uart_message(const char* msg) {  
-    for (uint8_t i = 0; i < 8; i++) {  
-        while (!EUSART1_is_tx_ready());  
-        EUSART1_Write(msg[i]);  
-    }  
-}  
+## **Message Handling Code**  
   
-void send_confirmation(char action) {  
-    char msg[8] = { 'F', 'S', 'A', 'S', '0', action, 'F', 'S' };  
-    send_uart_message(msg);  
-}
-
-
-void main(void)  
-{
-
-    SYSTEM_Initialize();
-    SPI1_Open(SPI1_DEFAULT);
-    CS_SetHigh();
-    __delay_ms(500);
+    #include "mcc_generated_files/mcc.h"
+    #include "mcc_generated_files/spi1.h"
     
-    char rx_buf[8] = {0};
-
-    while (1)
+    #define MY_ID 'A'
+    
+    #define FWD_CMD 0b11101111
+    #define REV_CMD 0b11101101
+    #define OFF_CMD 0b11100000
+    
+    void send_uart_message(const char* msg) {
+        for (uint8_t i = 0; i < 8; i++) {
+            while (!EUSART1_is_tx_ready());
+            EUSART1_Write(msg[i]);
+        }
+    }
+    
+    void send_confirmation(char action) {
+        char msg[8] = { 'F', 'S', 'A', 'S', '0', action, 'F', 'S' };
+        send_uart_message(msg);
+    }
+    
+    void main(void)
     {
-        if (EUSART1_is_rx_ready()) {
-            char byte = EUSART1_Read();
-
-            for (uint8_t i = 0; i < 7; i++) rx_buf[i] = rx_buf[i + 1];
-            rx_buf[7] = byte;
-
-            if (rx_buf[0] == 'F' && rx_buf[1] == 'S' &&
-                rx_buf[2] == 'S' && rx_buf[3] == 'A' &&
-                rx_buf[4] == '0' && rx_buf[6] == 'F' && rx_buf[7] == 'S') {
-
-                char cmd = rx_buf[5];
-
-                if (cmd == '1') {
-                    CS_SetLow(); SPI1_ExchangeByte(FWD_CMD); CS_SetHigh();
-                } else if (cmd == '2') {
-                    CS_SetLow(); SPI1_ExchangeByte(REV_CMD); CS_SetHigh();
-                } else if (cmd == '3') {
-                    CS_SetLow(); SPI1_ExchangeByte(OFF_CMD); CS_SetHigh();
+        SYSTEM_Initialize();
+        SPI1_Open(SPI1_DEFAULT);
+        CS_SetHigh();
+        __delay_ms(500);
+    
+        char rx_buf[8] = {0};
+    
+        while (1)
+        {
+            if (EUSART1_is_rx_ready()) {
+                char byte = EUSART1_Read();
+    
+                for (uint8_t i = 0; i < 7; i++) rx_buf[i] = rx_buf[i + 1];
+                rx_buf[7] = byte;
+    
+                if (rx_buf[0] == 'F' && rx_buf[1] == 'S' &&
+                    rx_buf[2] == 'S' && rx_buf[3] == 'A' &&
+                    rx_buf[4] == '0' && rx_buf[6] == 'F' && rx_buf[7] == 'S') {
+    
+                    char cmd = rx_buf[5];
+    
+                    if (cmd == '1') {
+                        CS_SetLow(); SPI1_ExchangeByte(FWD_CMD); CS_SetHigh();
+                    } else if (cmd == '2') {
+                        CS_SetLow(); SPI1_ExchangeByte(REV_CMD); CS_SetHigh();
+                    } else if (cmd == '3') {
+                        CS_SetLow(); SPI1_ExchangeByte(OFF_CMD); CS_SetHigh();
+                    }
+    
+                    send_confirmation(cmd); // Send reply to S
                 }
-
-                send_confirmation(cmd); // Send reply to S
             }
         }
     }
-}
+
