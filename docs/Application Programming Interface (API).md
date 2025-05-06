@@ -66,13 +66,15 @@ void send_confirmation(char action) {
     send_uart_message(msg);
 }
 
-void main(void)
+
+void main(void) 
 {
+
     SYSTEM_Initialize();
     SPI1_Open(SPI1_DEFAULT);
     CS_SetHigh();
     __delay_ms(500);
-
+    
     char rx_buf[8] = {0};
 
     while (1)
