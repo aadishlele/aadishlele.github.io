@@ -45,65 +45,60 @@
 
 ## **Message Handling Code**
 
-\#include \<xc.h\>  
-\#include \<stdint.h\>  
-\#include \<stdbool.h\>  
-\#define UART\_BUFFER\_SIZE 10  
-\#define MSG\_PREFIX\_1 0x0001  // Change Motor Direction  
-\#define MSG\_PREFIX\_2 0x0002  // Update Motor Speed  
-\#define MSG\_SUFFIX\_1 0x0020  
-\#define MSG\_SUFFIX\_2 0x0021  
-// UART Receive Buffer  
-volatile uint8\_t uartBuffer\[UART\_BUFFER\_SIZE\];  
-volatile uint8\_t bufferIndex \= 0;  
-// Function Prototypes  
-void UART\_Init(void);  
-void UART\_Send(uint8\_t \*message, uint8\_t length);  
-void Process\_Message(uint8\_t \*message, uint8\_t length);  
-void UART\_Receive\_Handler(void);  
-void UART\_Init(void) {  
-    // Configure UART for 9600 baud, 8-N-1  
-    SPBRG \= 25; // Adjust for different baud rates  
-    TXSTAbits.BRGH \= 1;  
-    RCSTAbits.SPEN \= 1; // Enable UART  
-    RCSTAbits.CREN \= 1; // Enable Reception  
-    TXSTAbits.TXEN \= 1; // Enable Transmission  
-    // Enable Interrupts  
-    PIE1bits.RCIE \= 1;  
-    INTCONbits.PEIE \= 1;  
-    INTCONbits.GIE \= 1;  
-}  
-void UART\_Send(uint8\_t \*message, uint8\_t length) {  
-    for (uint8\_t i \= 0; i \< length; i++) {  
-        TXREG \= message\[i\];  
-        while (\!TXSTAbits.TRMT);  
-    }  
-}  
-void Process\_Message(uint8\_t \*message, uint8\_t length) {  
-    uint16\_t prefix \= (message\[0\] \<\< 8\) | message\[1\];  
-    uint16\_t suffix \= (message\[6\] \<\< 8\) | message\[7\];  
-    if (prefix \== MSG\_PREFIX\_1 && suffix \== MSG\_SUFFIX\_1) {  
-        uint8\_t motor\_direction \= message\[4\];  
-        // Apply motor direction change here  
-    }  
-    else if (prefix \== MSG\_PREFIX\_2 && suffix \== MSG\_SUFFIX\_2) {  
-        uint16\_t motor\_speed \= message\[4\];  
-        // Apply motor speed update here  
-    }  
-    uint8\_t ack\_msg\[\] \= {message\[0\], message\[1\], 0x01};  
-    UART\_Send(ack\_msg, 3);  
-}  
-void UART\_Receive\_Handler(void) {  
-    if (PIR1bits.RCIF) {  
-        uint8\_t receivedByte \= RCREG;  
-        if (bufferIndex \== 0 && receivedByte \!= 0x00) {  
-            uartBuffer\[bufferIndex++\] \= receivedByte;  
-        } else if (bufferIndex \> 0\) {  
-            uartBuffer\[bufferIndex++\] \= receivedByte;  
-            if (bufferIndex \>= UART\_BUFFER\_SIZE) {  
-                Process\_Message(uartBuffer, bufferIndex);  
-                bufferIndex \= 0;  
-            }  
-        }  
-    }  
-}  
+#include "mcc_generated_files/mcc.h"
+#include "mcc_generated_files/spi1.h"
+
+#define MY_ID 'A'
+
+#define FWD_CMD 0b11101111
+#define REV_CMD 0b11101101
+#define OFF_CMD 0b11100000
+
+void send_uart_message(const char* msg) {
+    for (uint8_t i = 0; i < 8; i++) {
+        while (!EUSART1_is_tx_ready());
+        EUSART1_Write(msg[i]);
+    }
+}
+
+void send_confirmation(char action) {
+    char msg[8] = { 'F', 'S', 'A', 'S', '0', action, 'F', 'S' };
+    send_uart_message(msg);
+}
+
+void main(void)
+{
+    SYSTEM_Initialize();
+    SPI1_Open(SPI1_DEFAULT);
+    CS_SetHigh();
+    __delay_ms(500);
+
+    char rx_buf[8] = {0};
+
+    while (1)
+    {
+        if (EUSART1_is_rx_ready()) {
+            char byte = EUSART1_Read();
+
+            for (uint8_t i = 0; i < 7; i++) rx_buf[i] = rx_buf[i + 1];
+            rx_buf[7] = byte;
+
+            if (rx_buf[0] == 'F' && rx_buf[1] == 'S' &&
+                rx_buf[2] == 'S' && rx_buf[3] == 'A' &&
+                rx_buf[4] == '0' && rx_buf[6] == 'F' && rx_buf[7] == 'S') {
+
+                char cmd = rx_buf[5];
+
+                if (cmd == '1') {
+                    CS_SetLow(); SPI1_ExchangeByte(FWD_CMD); CS_SetHigh();
+                } else if (cmd == '2') {
+                    CS_SetLow(); SPI1_ExchangeByte(REV_CMD); CS_SetHigh();
+                } else if (cmd == '3') {
+                    CS_SetLow(); SPI1_ExchangeByte(OFF_CMD); CS_SetHigh();
+                }
+
+                send_confirmation(cmd); // Send reply to S
+            }
+        }
+    }
+}
