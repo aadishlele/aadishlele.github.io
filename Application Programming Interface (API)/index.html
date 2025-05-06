@@ -926,59 +926,64 @@
 </table>
 <p><strong>Function:</strong> Updates the motor speed in Aadish’s motor driver system.</p>
 <h2 id="message-handling-code"><strong>Message Handling Code</strong></h2>
-<h1 id="include-mcc_generated_filesmcch">include "mcc_generated_files/mcc.h"</h1>
-<h1 id="include-mcc_generated_filesspi1h">include "mcc_generated_files/spi1.h"</h1>
-<h1 id="define-my_id-a">define MY_ID 'A'</h1>
-<h1 id="define-fwd_cmd-0b11101111">define FWD_CMD 0b11101111</h1>
-<h1 id="define-rev_cmd-0b11101101">define REV_CMD 0b11101101</h1>
-<h1 id="define-off_cmd-0b11100000">define OFF_CMD 0b11100000</h1>
-<p>void send_uart_message(const char* msg) {<br />
-    for (uint8_t i = 0; i &lt; 8; i++) {<br />
-        while (!EUSART1_is_tx_ready());<br />
-        EUSART1_Write(msg[i]);<br />
-    }<br />
-}  </p>
-<p>void send_confirmation(char action) {<br />
-    char msg[8] = { 'F', 'S', 'A', 'S', '0', action, 'F', 'S' };<br />
-    send_uart_message(msg);<br />
-}</p>
-<p>void main(void)<br />
-{</p>
-<pre><code>SYSTEM_Initialize();
-SPI1_Open(SPI1_DEFAULT);
-CS_SetHigh();
-__delay_ms(500);
+<pre><code>#include "mcc_generated_files/mcc.h"
+#include "mcc_generated_files/spi1.h"
 
-char rx_buf[8] = {0};
+#define MY_ID 'A'
 
-while (1)
+#define FWD_CMD 0b11101111
+#define REV_CMD 0b11101101
+#define OFF_CMD 0b11100000
+
+void send_uart_message(const char* msg) {
+    for (uint8_t i = 0; i &lt; 8; i++) {
+        while (!EUSART1_is_tx_ready());
+        EUSART1_Write(msg[i]);
+    }
+}
+
+void send_confirmation(char action) {
+    char msg[8] = { 'F', 'S', 'A', 'S', '0', action, 'F', 'S' };
+    send_uart_message(msg);
+}
+
+void main(void)
 {
-    if (EUSART1_is_rx_ready()) {
-        char byte = EUSART1_Read();
+    SYSTEM_Initialize();
+    SPI1_Open(SPI1_DEFAULT);
+    CS_SetHigh();
+    __delay_ms(500);
 
-        for (uint8_t i = 0; i &lt; 7; i++) rx_buf[i] = rx_buf[i + 1];
-        rx_buf[7] = byte;
+    char rx_buf[8] = {0};
 
-        if (rx_buf[0] == 'F' &amp;&amp; rx_buf[1] == 'S' &amp;&amp;
-            rx_buf[2] == 'S' &amp;&amp; rx_buf[3] == 'A' &amp;&amp;
-            rx_buf[4] == '0' &amp;&amp; rx_buf[6] == 'F' &amp;&amp; rx_buf[7] == 'S') {
+    while (1)
+    {
+        if (EUSART1_is_rx_ready()) {
+            char byte = EUSART1_Read();
 
-            char cmd = rx_buf[5];
+            for (uint8_t i = 0; i &lt; 7; i++) rx_buf[i] = rx_buf[i + 1];
+            rx_buf[7] = byte;
 
-            if (cmd == '1') {
-                CS_SetLow(); SPI1_ExchangeByte(FWD_CMD); CS_SetHigh();
-            } else if (cmd == '2') {
-                CS_SetLow(); SPI1_ExchangeByte(REV_CMD); CS_SetHigh();
-            } else if (cmd == '3') {
-                CS_SetLow(); SPI1_ExchangeByte(OFF_CMD); CS_SetHigh();
+            if (rx_buf[0] == 'F' &amp;&amp; rx_buf[1] == 'S' &amp;&amp;
+                rx_buf[2] == 'S' &amp;&amp; rx_buf[3] == 'A' &amp;&amp;
+                rx_buf[4] == '0' &amp;&amp; rx_buf[6] == 'F' &amp;&amp; rx_buf[7] == 'S') {
+
+                char cmd = rx_buf[5];
+
+                if (cmd == '1') {
+                    CS_SetLow(); SPI1_ExchangeByte(FWD_CMD); CS_SetHigh();
+                } else if (cmd == '2') {
+                    CS_SetLow(); SPI1_ExchangeByte(REV_CMD); CS_SetHigh();
+                } else if (cmd == '3') {
+                    CS_SetLow(); SPI1_ExchangeByte(OFF_CMD); CS_SetHigh();
+                }
+
+                send_confirmation(cmd); // Send reply to S
             }
-
-            send_confirmation(cmd); // Send reply to S
         }
     }
 }
 </code></pre>
-<p>}</p>
 
 
 
