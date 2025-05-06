@@ -942,13 +942,14 @@
     char msg[8] = { 'F', 'S', 'A', 'S', '0', action, 'F', 'S' };
     send_uart_message(msg);
 }</p>
-<p>void main(void)
-{
-    SYSTEM_Initialize();
-    SPI1_Open(SPI1_DEFAULT);
-    CS_SetHigh();
-    __delay_ms(500);</p>
-<pre><code>char rx_buf[8] = {0};
+<p>void main(void) 
+{</p>
+<pre><code>SYSTEM_Initialize();
+SPI1_Open(SPI1_DEFAULT);
+CS_SetHigh();
+__delay_ms(500);
+
+char rx_buf[8] = {0};
 
 while (1)
 {
