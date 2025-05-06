@@ -685,14 +685,28 @@
 <p><strong>Motor Driver Section</strong>:<br />
 This component features two output pins that connect directly to the motor, enabling directional control. It also includes two SPI communication pins that  interface with the PIC microcontroller for receiving control commands.  </p>
 <p><strong>PIC18F47Q10 Microcontroller Section</strong>:
-The PIC18F47Q10 is responsible for controlling the motor via SPI communication. It connects to the motor driver through four SPI pins:<br />
-    - CSN (Chip Select)<br />
-    - SCK (Serial Clock)<br />
-    - SI (Serial Input)<br />
-    - SO (Serial Output) <br />
-Additionally, the PIC has two UART pins:  <br />
-    -  RX (Receiver) connected to the Connector IN via ribbon cable <br />
-    -  TX (Transmitter) connected to the Connector OUT via ribbon cable   </p>
+The PIC18F47Q10 is responsible for controlling the motor via SPI communication. It connects to the motor driver through four SPI pins:  </p>
+<ul>
+<li>
+<p>CSN (Chip Select)</p>
+</li>
+<li>
+<p>SCK (Serial Clock)</p>
+</li>
+<li>
+<p>SI (Serial Input)</p>
+</li>
+<li>
+<p>SO (Serial Output) <br />
+Additionally, the PIC has two UART pins:</p>
+</li>
+<li>
+<p>RX (Receiver) connected to the Connector IN via ribbon cable</p>
+</li>
+<li>
+<p>TX (Transmitter) connected to the Connector OUT via ribbon cable   </p>
+</li>
+</ul>
 <p><strong>Connections Section</strong>:<br />
 This section contains the ribbon cable interfaces for UART communication. The RX pin receives incoming data via the Connector IN, and the TX pin sends outgoing data via the Connector OUT.<br />
 The block diagram was designed by first identifying and separating the core components, then listing all relevant pins for each. Once the interconnections between components were finalized, the diagram was completed to reflect the full communication and control pathways.  </p>
