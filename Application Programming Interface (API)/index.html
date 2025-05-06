@@ -29,7 +29,7 @@
 
     
       
-        <title>API - EGR314 Aadish Lele</title>
+        <title>Application Programming Interface - EGR314 Aadish Lele</title>
       
     
     
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api" class="md-skip">
+        <a href="#application-programming-interface" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API
+              Application Programming Interface
             
           </span>
         </div>
@@ -226,7 +226,7 @@
   
     
   
-  API
+  Application Programming Interface
 
       </a>
     </li>
@@ -426,7 +426,7 @@
           
   
   <span class="md-ellipsis">
-    API
+    Application Programming Interface
   </span>
   
 
@@ -437,7 +437,7 @@
         
   
   <span class="md-ellipsis">
-    API
+    Application Programming Interface
   </span>
   
 
@@ -473,23 +473,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#messages-my-subsystem-sends-receives" class="md-nav__link">
-    Messages My Subsystem Sends &amp; Receives
+  <a href="#message-types" class="md-nav__link">
+    Message Types
   </a>
   
-    <nav class="md-nav" aria-label="Messages My Subsystem Sends & Receives">
+    <nav class="md-nav" aria-label="Message Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-1-motor-direction-command" class="md-nav__link">
-    Message Type 1 – Motor Direction Command
+  <a href="#message-type-1-motor-direction-command-sent-from-shaurya-to-aadish" class="md-nav__link">
+    **Message Type 1 – Motor Direction Command (Sent from Shaurya to Aadish) **
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-type-2-acknowledgement" class="md-nav__link">
-    Message Type 2 – Acknowledgement
+  <a href="#message-type-2-acknowledgement-sent-from-aadish-to-shaurya" class="md-nav__link">
+    Message Type 2 – Acknowledgement (Sent from Aadish to Shaurya)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial-message-format" class="md-nav__link">
+    Serial Message Format
   </a>
   
 </li>
@@ -693,23 +700,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#messages-my-subsystem-sends-receives" class="md-nav__link">
-    Messages My Subsystem Sends &amp; Receives
+  <a href="#message-types" class="md-nav__link">
+    Message Types
   </a>
   
-    <nav class="md-nav" aria-label="Messages My Subsystem Sends & Receives">
+    <nav class="md-nav" aria-label="Message Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-1-motor-direction-command" class="md-nav__link">
-    Message Type 1 – Motor Direction Command
+  <a href="#message-type-1-motor-direction-command-sent-from-shaurya-to-aadish" class="md-nav__link">
+    **Message Type 1 – Motor Direction Command (Sent from Shaurya to Aadish) **
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-type-2-acknowledgement" class="md-nav__link">
-    Message Type 2 – Acknowledgement
+  <a href="#message-type-2-acknowledgement-sent-from-aadish-to-shaurya" class="md-nav__link">
+    Message Type 2 – Acknowledgement (Sent from Aadish to Shaurya)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial-message-format" class="md-nav__link">
+    Serial Message Format
   </a>
   
 </li>
@@ -749,7 +763,7 @@
   
 
 
-<h1 id="api"><strong>API</strong></h1>
+<h1 id="application-programming-interface"><strong>Application Programming Interface</strong></h1>
 <h2 id="user-id-assignments"><strong>User ID Assignments</strong></h2>
 <table>
 <thead>
@@ -761,11 +775,11 @@
 <tbody>
 <tr>
 <td><strong>Aadish</strong></td>
-<td><strong>A</strong></td>
+<td><strong>0xFD</strong></td>
 </tr>
 <tr>
 <td>Shaurya</td>
-<td>S</td>
+<td>0xFC</td>
 </tr>
 </tbody>
 </table>
@@ -812,119 +826,90 @@
 </tr>
 </tbody>
 </table>
-<h2 id="messages-my-subsystem-sends-receives"><strong>Messages My Subsystem Sends &amp; Receives</strong></h2>
-<h3 id="message-type-1-motor-direction-command"><strong>Message Type 1 – Motor Direction Command</strong></h3>
+<h2 id="message-types"><strong>Message Types</strong></h2>
+<h3 id="message-type-1-motor-direction-command-sent-from-shaurya-to-aadish">**Message Type 1 – Motor Direction Command (Sent from Shaurya to Aadish) **</h3>
 <table>
 <thead>
 <tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Data Type</th>
-<th>Min Value</th>
-<th>Max Value</th>
-<th>Example</th>
+<th>Condition</th>
+<th>Message ID</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1-2</td>
-<td><code>prefix</code></td>
-<td><code>uint16_t</code></td>
-<td>0x0001</td>
-<td>0x0001</td>
-<td>0x0001</td>
+<td>Temp ≤ 25°C</td>
+<td>0x01</td>
+<td>Motor Forward</td>
 </tr>
 <tr>
-<td>3</td>
-<td><code>sender_id</code></td>
-<td><code>uint8_t</code></td>
-<td>0xFF</td>
-<td>0xFF</td>
-<td>0xFF</td>
+<td>25°C &lt; Temp ≤ 30°C</td>
+<td>0x02</td>
+<td>Motor Reverse</td>
 </tr>
 <tr>
-<td>4</td>
-<td><code>receiver_id</code></td>
-<td><code>uint8_t</code></td>
-<td>0xFD</td>
-<td>0xFD</td>
-<td>0xFD</td>
-</tr>
-<tr>
-<td>5-6</td>
-<td><code>motor_direction</code></td>
-<td><code>uint16_t</code></td>
-<td>0x40 (Forward)</td>
-<td>0x41 (Reverse)</td>
-<td>0x40</td>
-</tr>
-<tr>
-<td>7-8</td>
-<td><code>suffix</code></td>
-<td><code>uint16_t</code></td>
-<td>0x0020</td>
-<td>0x0020</td>
-<td>0x0020</td>
+<td>Temp &gt; 30°C</td>
+<td>0x03</td>
+<td>Motor Off</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Function:</strong> Commands Aadish to change motor direction.</p>
-<h3 id="message-type-2-acknowledgement"><strong>Message Type 2 – Acknowledgement</strong></h3>
+<h3 id="message-type-2-acknowledgement-sent-from-aadish-to-shaurya"><strong>Message Type 2 – Acknowledgement (Sent from Aadish to Shaurya)</strong></h3>
 <table>
 <thead>
 <tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Data Type</th>
-<th>Min Value</th>
-<th>Max Value</th>
-<th>Example</th>
+<th>Message ID</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1-2</td>
-<td><code>prefix</code></td>
-<td><code>uint16_t</code></td>
-<td>0x0002</td>
-<td>0x0002</td>
-<td>0x0002</td>
+<td>0x01</td>
+<td>Motor Forward Confirmation – Blink RB0</td>
 </tr>
 <tr>
-<td>3</td>
-<td><code>sender_id</code></td>
-<td><code>uint8_t</code></td>
-<td>0xFC</td>
-<td>0xFC</td>
-<td>0xFC</td>
+<td>0x02</td>
+<td>Motor Reverse Confirmation – Blink RB4</td>
 </tr>
 <tr>
-<td>4</td>
-<td><code>receiver_id</code></td>
-<td><code>uint8_t</code></td>
-<td>0xFD</td>
-<td>0xFD</td>
-<td>0xFD</td>
-</tr>
-<tr>
-<td>5-6</td>
-<td><code>motor_speed</code></td>
-<td><code>uint16_t</code></td>
-<td>0x42 (Increase)</td>
-<td>0x43 (Decrease)</td>
-<td>0x42</td>
-</tr>
-<tr>
-<td>7-8</td>
-<td><code>suffix</code></td>
-<td><code>uint16_t</code></td>
-<td>0x0021</td>
-<td>0x0021</td>
-<td>0x0021</td>
+<td>0x03</td>
+<td>Motor Off Confirmation – Blink RB0 &amp; RB4</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Function:</strong> Updates the motor speed in Aadish’s motor driver system.</p>
+<h3 id="serial-message-format">Serial Message Format</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Example (Motor Forward)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prefix</td>
+<td>FS</td>
+</tr>
+<tr>
+<td>Sender ID</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Receiver ID</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>01 (Forward)</td>
+</tr>
+<tr>
+<td>Suffix</td>
+<td>FS</td>
+</tr>
+</tbody>
+</table>
 <h2 id="message-handling-code"><strong>Message Handling Code</strong></h2>
 <pre><code>#include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/spi1.h"
